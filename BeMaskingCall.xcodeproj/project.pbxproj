@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331EF96778344ACA77FE7E10 /* Pods_BeMaskingCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE3C2D63A2B7C86B8F2771E /* Pods_BeMaskingCall.framework */; };
 		5DD59442229446AE004220B0 /* BeMaskingCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD59440229446AE004220B0 /* BeMaskingCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DD59449229446E2004220B0 /* DemoFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD59448229446E2004220B0 /* DemoFramework.swift */; };
+		5DD594F522948449004220B0 /* DemoStringee.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD594F322948449004220B0 /* DemoStringee.h */; };
+		5DD594F622948449004220B0 /* DemoStringee.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD594F422948449004220B0 /* DemoStringee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5DD5943D229446AE004220B0 /* BeMaskingCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BeMaskingCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD59440229446AE004220B0 /* BeMaskingCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeMaskingCall.h; sourceTree = "<group>"; };
 		5DD59441229446AE004220B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DD59448229446E2004220B0 /* DemoFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFramework.swift; sourceTree = "<group>"; };
+		5DD594F322948449004220B0 /* DemoStringee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoStringee.h; sourceTree = "<group>"; };
+		5DD594F422948449004220B0 /* DemoStringee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoStringee.m; sourceTree = "<group>"; };
+		C60E4C9CEF43DF2DACC85A6A /* Pods-BeMaskingCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeMaskingCall.release.xcconfig"; path = "Target Support Files/Pods-BeMaskingCall/Pods-BeMaskingCall.release.xcconfig"; sourceTree = "<group>"; };
+		C947B94A736CD1545F333261 /* Pods-BeMaskingCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeMaskingCall.debug.xcconfig"; path = "Target Support Files/Pods-BeMaskingCall/Pods-BeMaskingCall.debug.xcconfig"; sourceTree = "<group>"; };
+		DBE3C2D63A2B7C86B8F2771E /* Pods_BeMaskingCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeMaskingCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331EF96778344ACA77FE7E10 /* Pods_BeMaskingCall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +41,8 @@
 			children = (
 				5DD5943F229446AE004220B0 /* BeMaskingCall */,
 				5DD5943E229446AE004220B0 /* Products */,
+				7924654C97EBF9929EAAC5D8 /* Pods */,
+				EA5490BD03B334AFC50ED395 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,10 +58,28 @@
 			isa = PBXGroup;
 			children = (
 				5DD59440229446AE004220B0 /* BeMaskingCall.h */,
-				5DD59448229446E2004220B0 /* DemoFramework.swift */,
+				5DD594F322948449004220B0 /* DemoStringee.h */,
+				5DD594F422948449004220B0 /* DemoStringee.m */,
 				5DD59441229446AE004220B0 /* Info.plist */,
 			);
 			path = BeMaskingCall;
+			sourceTree = "<group>";
+		};
+		7924654C97EBF9929EAAC5D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C947B94A736CD1545F333261 /* Pods-BeMaskingCall.debug.xcconfig */,
+				C60E4C9CEF43DF2DACC85A6A /* Pods-BeMaskingCall.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA5490BD03B334AFC50ED395 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBE3C2D63A2B7C86B8F2771E /* Pods_BeMaskingCall.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -62,6 +89,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DD594F522948449004220B0 /* DemoStringee.h in Headers */,
 				5DD59442229446AE004220B0 /* BeMaskingCall.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DD59445229446AE004220B0 /* Build configuration list for PBXNativeTarget "BeMaskingCall" */;
 			buildPhases = (
+				AB3AD0673451BAA146D50127 /* [CP] Check Pods Manifest.lock */,
 				5DD59438229446AE004220B0 /* Headers */,
 				5DD59439229446AE004220B0 /* Sources */,
 				5DD5943A229446AE004220B0 /* Frameworks */,
@@ -129,12 +158,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AB3AD0673451BAA146D50127 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeMaskingCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5DD59439229446AE004220B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DD59449229446E2004220B0 /* DemoFramework.swift in Sources */,
+				5DD594F622948449004220B0 /* DemoStringee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +315,7 @@
 		};
 		5DD59446229446AE004220B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C947B94A736CD1545F333261 /* Pods-BeMaskingCall.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -288,6 +343,7 @@
 		};
 		5DD59447229446AE004220B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C60E4C9CEF43DF2DACC85A6A /* Pods-BeMaskingCall.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

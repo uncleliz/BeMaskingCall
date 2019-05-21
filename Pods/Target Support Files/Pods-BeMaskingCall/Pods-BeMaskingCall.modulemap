@@ -1,0 +1,6 @@
+framework module Pods_BeMaskingCall {
+  umbrella header "Pods-BeMaskingCall-umbrella.h"
+
+  export *
+  module * { export * }
+}
