@@ -41,8 +41,8 @@
 		5D0B35AA22964BF3008B24A6 /* CallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358022964BF3008B24A6 /* CallManager.m */; };
 		5D0B35AB22964BF3008B24A6 /* StringeeImplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358122964BF3008B24A6 /* StringeeImplement.m */; };
 		5D0B35AC22964BF3008B24A6 /* SPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358222964BF3008B24A6 /* SPManager.m */; };
-		5D0B35AD22964BF3008B24A6 /* SPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358322964BF3008B24A6 /* SPManager.h */; };
-		5D0B35AE22964BF3008B24A6 /* StringeeImplement.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358422964BF3008B24A6 /* StringeeImplement.h */; };
+		5D0B35AD22964BF3008B24A6 /* SPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358322964BF3008B24A6 /* SPManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D0B35AE22964BF3008B24A6 /* StringeeImplement.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358422964BF3008B24A6 /* StringeeImplement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35AF22964BF3008B24A6 /* CallManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358522964BF3008B24A6 /* CallManager.h */; };
 		5D0B35B022964BF3008B24A6 /* PulsingAnimationCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358622964BF3008B24A6 /* PulsingAnimationCall.swift */; };
 		5D0B35B122964BF3008B24A6 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358822964BF3008B24A6 /* HTTPClient.m */; };
