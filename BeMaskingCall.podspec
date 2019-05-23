@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "uncleliz" => "dinhmanhvp@gmail.com" }
   spec.platform     = :ios, "9.0"
   spec.source       = { :git => "https://github.com/uncleliz/BeMaskingCall.git", :tag => "1.0.10" }
-  spec.source_files  = "BeMaskingCall","BeMaskingCall/MaskingCall/Base/*.{h,m,swift}","BeMaskingCall/MaskingCall/CallingVC/*.{h,m,swift}","BeMaskingCall/MaskingCall/Models/*.{h,m,swift}"
+  spec.source_files  = "BeMaskingCall","BeMaskingCall/MaskingCall/CallingVC/*.{h}","BeMaskingCall/MaskingCall/Models/*.{h}"
 #spec.source_files  = "BeMaskingCall", "BeMaskingCall/MaskingCall/Base/*.{h,m,swift}","BeMaskingCall/MaskingCall/CallingVC/*.{h,m,swift}","BeMaskingCall/MaskingCall/Models/*.{h,m,swift}","BeMaskingCall/MaskingCall/Services/*.{h,m,swift}","BeMaskingCall/MaskingCall/Utils/*.{h,m,swift}"
 
   spec.swift_version = "4.0"
