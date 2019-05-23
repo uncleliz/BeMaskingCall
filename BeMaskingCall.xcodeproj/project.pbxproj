@@ -29,20 +29,20 @@
 		5D0B359E22964BF3008B24A6 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B357022964BF3008B24A6 /* IBMPlexSans-Bold.ttf */; };
 		5D0B359F22964BF3008B24A6 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357222964BF3008B24A6 /* Utils.h */; };
 		5D0B35A022964BF3008B24A6 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357322964BF3008B24A6 /* Utils.m */; };
-		5D0B35A122964BF3008B24A6 /* ConfigMaskingCallModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357522964BF3008B24A6 /* ConfigMaskingCallModel.h */; };
+		5D0B35A122964BF3008B24A6 /* ConfigMaskingCallModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357522964BF3008B24A6 /* ConfigMaskingCallModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35A222964BF3008B24A6 /* CalloutNumberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357622964BF3008B24A6 /* CalloutNumberModel.m */; };
 		5D0B35A322964BF3008B24A6 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357722964BF3008B24A6 /* UserModel.m */; };
-		5D0B35A422964BF3008B24A6 /* CalloutNumberModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357822964BF3008B24A6 /* CalloutNumberModel.h */; };
+		5D0B35A422964BF3008B24A6 /* CalloutNumberModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357822964BF3008B24A6 /* CalloutNumberModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35A522964BF3008B24A6 /* ConfigMaskingCallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357922964BF3008B24A6 /* ConfigMaskingCallModel.m */; };
-		5D0B35A622964BF3008B24A6 /* UserModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357A22964BF3008B24A6 /* UserModel.h */; };
+		5D0B35A622964BF3008B24A6 /* UserModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357A22964BF3008B24A6 /* UserModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35A722964BF3008B24A6 /* CallingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B357C22964BF3008B24A6 /* CallingViewController.xib */; };
-		5D0B35A822964BF3008B24A6 /* CallingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357D22964BF3008B24A6 /* CallingViewController.h */; };
+		5D0B35A822964BF3008B24A6 /* CallingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357D22964BF3008B24A6 /* CallingViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35A922964BF3008B24A6 /* CallingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357E22964BF3008B24A6 /* CallingViewController.m */; };
 		5D0B35AA22964BF3008B24A6 /* CallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358022964BF3008B24A6 /* CallManager.m */; };
 		5D0B35AB22964BF3008B24A6 /* StringeeImplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358122964BF3008B24A6 /* StringeeImplement.m */; };
 		5D0B35AC22964BF3008B24A6 /* SPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358222964BF3008B24A6 /* SPManager.m */; };
 		5D0B35AD22964BF3008B24A6 /* SPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358322964BF3008B24A6 /* SPManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D0B35AE22964BF3008B24A6 /* StringeeImplement.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358422964BF3008B24A6 /* StringeeImplement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D0B35AE22964BF3008B24A6 /* StringeeImplement.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358422964BF3008B24A6 /* StringeeImplement.h */; };
 		5D0B35AF22964BF3008B24A6 /* CallManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358522964BF3008B24A6 /* CallManager.h */; };
 		5D0B35B022964BF3008B24A6 /* PulsingAnimationCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358622964BF3008B24A6 /* PulsingAnimationCall.swift */; };
 		5D0B35B122964BF3008B24A6 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358822964BF3008B24A6 /* HTTPClient.m */; };
@@ -53,9 +53,9 @@
 		5D0B35B822964DE6008B24A6 /* BeCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B35B622964DE6008B24A6 /* BeCommon.m */; };
 		5D0B35BB22964E56008B24A6 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35B922964E56008B24A6 /* Reachability.h */; };
 		5D0B35BC22964E56008B24A6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B35BA22964E56008B24A6 /* Reachability.m */; };
-		5D0B35BF22965159008B24A6 /* BeCustomerInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35BD22965159008B24A6 /* BeCustomerInfoModel.h */; };
+		5D0B35BF22965159008B24A6 /* BeCustomerInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35BD22965159008B24A6 /* BeCustomerInfoModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35C022965159008B24A6 /* BeCustomerInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B35BE22965159008B24A6 /* BeCustomerInfoModel.m */; };
-		5D0B35C322965177008B24A6 /* RideInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35C122965177008B24A6 /* RideInfoModel.h */; };
+		5D0B35C322965177008B24A6 /* RideInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35C122965177008B24A6 /* RideInfoModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35C422965177008B24A6 /* RideInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B35C222965177008B24A6 /* RideInfoModel.m */; };
 		5D0B35CA22965978008B24A6 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B35C922965978008B24A6 /* Image.xcassets */; };
 		5DD59442229446AE004220B0 /* BeMaskingCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD59440229446AE004220B0 /* BeMaskingCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -218,8 +218,6 @@
 		5D0B357F22964BF3008B24A6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				5D0B358422964BF3008B24A6 /* StringeeImplement.h */,
-				5D0B358122964BF3008B24A6 /* StringeeImplement.m */,
 				5D0B358322964BF3008B24A6 /* SPManager.h */,
 				5D0B358222964BF3008B24A6 /* SPManager.m */,
 				5D0B358522964BF3008B24A6 /* CallManager.h */,
@@ -229,6 +227,8 @@
 				5D0B35B622964DE6008B24A6 /* BeCommon.m */,
 				5D0B35B922964E56008B24A6 /* Reachability.h */,
 				5D0B35BA22964E56008B24A6 /* Reachability.m */,
+				5D0B358422964BF3008B24A6 /* StringeeImplement.h */,
+				5D0B358122964BF3008B24A6 /* StringeeImplement.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -573,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C947B94A736CD1545F333261 /* Pods-BeMaskingCall.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -602,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C60E4C9CEF43DF2DACC85A6A /* Pods-BeMaskingCall.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

@@ -12,10 +12,11 @@
 #import "Utils.h"
 #import "GlobalService.h"
 #import "BeCommon.h"
+#import <Stringee/Stringee.h>
 static int TIME_WINDOW = 2;
 static int CALL_TIME_OUT = 15; // giây
 
-@interface CallingViewController ()
+@interface CallingViewController () <StringeeCallDelegate, StringeeRemoteViewDelegate>
 
 @end
 
@@ -573,14 +574,14 @@ static int CALL_TIME_OUT = 15; // giây
 -(void)trackingQualityWith:(long long)svgAudio
 {
     if (_stringeeCall.callId) {
-        NSString *strAccessToken = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].customerInfo.publicAccessTokenString];
-        NSDictionary *params = @{@"quality": [NSNumber numberWithLongLong:svgAudio],
-                                 @"call_id": _stringeeCall.callId,
-                                 @"access_token": strAccessToken,
-                                 };
-        [GlobalService putTrackingSignalWithParameters:params completionHandler:^(id responseObject) {
-            NSLog(@"putTrackingSignalWithParameters");
-        }];
+//        NSString *strAccessToken = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].customerInfo.publicAccessTokenString];
+//        NSDictionary *params = @{@"quality": [NSNumber numberWithLongLong:svgAudio],
+//                                 @"call_id": _stringeeCall.callId,
+//                                 @"access_token": strAccessToken,
+//                                 };
+//        [GlobalService putTrackingSignalWithParameters:params completionHandler:^(id responseObject) {
+//            NSLog(@"putTrackingSignalWithParameters");
+//        }];
     }
 }
 - (void)didSessionRouteChange:(NSNotification *)notification {

@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import <Stringee/Stringee.h>
-
-
+#import <AFNetworking/AFNetworking.h>
+@class StringeeCall;
 typedef NS_ENUM(NSInteger, ScreenMode) {
     // Cuộc gọi voice đi
     ScreenModeOutgoingVoiceCall,
@@ -37,7 +36,7 @@ typedef NS_ENUM(NSInteger, ScreenMode) {
     ScreenModeReplyRequest
 };
 
-@interface CallingViewController : UIViewController<StringeeCallDelegate, StringeeRemoteViewDelegate>
+@interface CallingViewController : UIViewController
 
 // Variable
 @property (weak, nonatomic) IBOutlet UILabel *labelPhoneNumber;
