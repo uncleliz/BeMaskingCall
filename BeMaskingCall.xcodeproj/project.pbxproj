@@ -58,6 +58,7 @@
 		5D0B35C322965177008B24A6 /* RideInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35C122965177008B24A6 /* RideInfoModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35C422965177008B24A6 /* RideInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B35C222965177008B24A6 /* RideInfoModel.m */; };
 		5D0B35CA22965978008B24A6 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B35C922965978008B24A6 /* Image.xcassets */; };
+		5DD400482297069C008A60D0 /* BeMaskingCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD5943D229446AE004220B0 /* BeMaskingCall.framework */; };
 		5DD59442229446AE004220B0 /* BeMaskingCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD59440229446AE004220B0 /* BeMaskingCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DD400482297069C008A60D0 /* BeMaskingCall.framework in Frameworks */,
 				331EF96778344ACA77FE7E10 /* Pods_BeMaskingCall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
