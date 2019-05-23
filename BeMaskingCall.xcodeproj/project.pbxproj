@@ -142,6 +142,7 @@
 				5D0B357B22964BF3008B24A6 /* CallingVC */,
 				5D0B357F22964BF3008B24A6 /* Base */,
 				5D0B358722964BF3008B24A6 /* Services */,
+				5DA1D1832296A9F50018269E /* StringeeImplement */,
 			);
 			path = MaskingCall;
 			sourceTree = "<group>";
@@ -227,8 +228,6 @@
 				5D0B35B622964DE6008B24A6 /* BeCommon.m */,
 				5D0B35B922964E56008B24A6 /* Reachability.h */,
 				5D0B35BA22964E56008B24A6 /* Reachability.m */,
-				5D0B358422964BF3008B24A6 /* StringeeImplement.h */,
-				5D0B358122964BF3008B24A6 /* StringeeImplement.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -242,6 +241,15 @@
 				5D0B358B22964BF3008B24A6 /* GlobalService.m */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5DA1D1832296A9F50018269E /* StringeeImplement */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B358422964BF3008B24A6 /* StringeeImplement.h */,
+				5D0B358122964BF3008B24A6 /* StringeeImplement.m */,
+			);
+			path = StringeeImplement;
 			sourceTree = "<group>";
 		};
 		5DD59433229446AE004220B0 = {
