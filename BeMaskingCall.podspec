@@ -9,15 +9,15 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "BeMaskingCall"
-  spec.version      = "1.0.10"
+  spec.version      = "1.0.12"
   spec.summary      = "This is framework of BeMaskingCall."
   spec.description  = "This is FrameWork of BeMaskingCall. This framework, you can call with internet"
   spec.homepage     = "https://github.com/uncleliz/BeMaskingCall"
   spec.license      = { :type => "MIT", :text => "The MIT License (MIT) \n Copyright (c) uncleliz <dinhmanhvp@gmail.com> \n Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files" }
   spec.author       = { "uncleliz" => "dinhmanhvp@gmail.com" }
   spec.platform     = :ios, "9.0"
-  spec.source       = { :git => "https://github.com/uncleliz/BeMaskingCall.git", :tag => "1.0.10" }
-  spec.source_files  = "BeMaskingCall/*.(h)","BeMaskingCall/MaskingCall/Manager/*.{h}","BeMaskingCall/MaskingCall/CallingVC/*.{h}","BeMaskingCall/MaskingCall/Models/*.{h}","BeMaskingCall/MaskingCall/Utils/*.{h}"
+  spec.source       = { :git => "https://github.com/uncleliz/BeMaskingCall.git", :tag => "1.0.12" }
+  spec.source_files  = "BeMaskingCall/*.(h)","BeMaskingCall/MaskingCall/ /Manager/*.{h}","BeMaskingCall/MaskingCall/CallingVC/*.{h}","BeMaskingCall/MaskingCall/Models/*.{h}","BeMaskingCall/MaskingCall/Utils/*.{h}"
 #spec.source_files  = "BeMaskingCall", "BeMaskingCall/MaskingCall/Base/*.{h,m,swift}","BeMaskingCall/MaskingCall/CallingVC/*.{h,m,swift}","BeMaskingCall/MaskingCall/Models/*.{h,m,swift}","BeMaskingCall/MaskingCall/Services/*.{h,m,swift}","BeMaskingCall/MaskingCall/Utils/*.{h,m,swift}"
 
   spec.swift_version = "4.0"
