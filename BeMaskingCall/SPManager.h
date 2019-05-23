@@ -65,4 +65,8 @@ typedef NS_ENUM(NSInteger, SyncStateCalling) {
 - (void) updateConfigMaskingCall:(id) responseObject driverID:(NSString*)strDriverId;
 // Instances
 @property (strong, nonatomic) CallingViewController *callingViewController;
+- (void) connectToStringeeServer;
+- (void)stopRingingWithMessage:(NSString *)message;
+- (void)createCallFollowUserActivity:(NSUserActivity *)userActivity;
+-(BOOL)isMaskingCall;
 @end

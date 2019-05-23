@@ -359,4 +359,24 @@ static SPManager *spManager = nil;
         [Utils writeCustomObjToUserDefaults:kmasking_phone_number object:dicMaskingInfo];
     }
 }
+//MARK: - StringeeImplement
+// Kết nối tới stringee server
+- (void) connectToStringeeServer {
+    [[StringeeImplement instance] connectToStringeeServer];
+}
+- (void)stopRingingWithMessage:(NSString *)message {
+    [[StringeeImplement instance] stopRingingWithMessage:message];
+}
+- (void)createCallFollowUserActivity:(NSUserActivity *)userActivity {
+    [[StringeeImplement instance] createCallFollowUserActivity:userActivity];
+}
+-(BOOL)isMaskingCall
+{
+    return [[StringeeImplement instance] isMaskingCall];
+}
+-(void)checkOpenCallingVC
+{
+    [[StringeeImplement instance] checkOpenCallingVC];
+
+}
 @end
