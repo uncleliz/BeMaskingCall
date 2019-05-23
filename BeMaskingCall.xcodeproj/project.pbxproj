@@ -135,6 +135,7 @@
 		5D0B355B22964BF3008B24A6 /* MaskingCall */ = {
 			isa = PBXGroup;
 			children = (
+				5DA1D1842296B1BA0018269E /* Manager */,
 				5D0B355C22964BF3008B24A6 /* Resources */,
 				5D0B356122964BF3008B24A6 /* IBM_Plex_Sans */,
 				5D0B357122964BF3008B24A6 /* Utils */,
@@ -250,6 +251,15 @@
 			path = StringeeImplement;
 			sourceTree = "<group>";
 		};
+		5DA1D1842296B1BA0018269E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B358322964BF3008B24A6 /* SPManager.h */,
+				5D0B358222964BF3008B24A6 /* SPManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		5DD59433229446AE004220B0 = {
 			isa = PBXGroup;
 			children = (
@@ -272,8 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				5DD59440229446AE004220B0 /* BeMaskingCall.h */,
-				5D0B358322964BF3008B24A6 /* SPManager.h */,
-				5D0B358222964BF3008B24A6 /* SPManager.m */,
 				5D0B355B22964BF3008B24A6 /* MaskingCall */,
 				5DD59441229446AE004220B0 /* Info.plist */,
 				5D0B35C922965978008B24A6 /* Image.xcassets */,
