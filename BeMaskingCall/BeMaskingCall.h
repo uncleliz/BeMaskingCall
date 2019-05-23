@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 //! Project version number for BeMaskingCall.
 FOUNDATION_EXPORT double BeMaskingCallVersionNumber;
 

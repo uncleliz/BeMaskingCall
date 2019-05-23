@@ -8,17 +8,113 @@
 
 /* Begin PBXBuildFile section */
 		331EF96778344ACA77FE7E10 /* Pods_BeMaskingCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE3C2D63A2B7C86B8F2771E /* Pods_BeMaskingCall.framework */; };
+		5D0B358C22964BF3008B24A6 /* busy_signal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B355D22964BF3008B24A6 /* busy_signal.mp3 */; };
+		5D0B358D22964BF3008B24A6 /* outgoing_tone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B355E22964BF3008B24A6 /* outgoing_tone.mp3 */; };
+		5D0B358E22964BF3008B24A6 /* end_call_tututu.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B355F22964BF3008B24A6 /* end_call_tututu.caf */; };
+		5D0B358F22964BF3008B24A6 /* incoming_call.aif in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356022964BF3008B24A6 /* incoming_call.aif */; };
+		5D0B359022964BF3008B24A6 /* IBMPlexSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356222964BF3008B24A6 /* IBMPlexSans-SemiBoldItalic.ttf */; };
+		5D0B359122964BF3008B24A6 /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356322964BF3008B24A6 /* IBMPlexSans-Medium.ttf */; };
+		5D0B359222964BF3008B24A6 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356422964BF3008B24A6 /* IBMPlexSans-SemiBold.ttf */; };
+		5D0B359322964BF3008B24A6 /* IBMPlexSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356522964BF3008B24A6 /* IBMPlexSans-MediumItalic.ttf */; };
+		5D0B359422964BF3008B24A6 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356622964BF3008B24A6 /* OFL.txt */; };
+		5D0B359522964BF3008B24A6 /* IBMPlexSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356722964BF3008B24A6 /* IBMPlexSans-LightItalic.ttf */; };
+		5D0B359622964BF3008B24A6 /* IBMPlexSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356822964BF3008B24A6 /* IBMPlexSans-ExtraLight.ttf */; };
+		5D0B359722964BF3008B24A6 /* IBMPlexSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356922964BF3008B24A6 /* IBMPlexSans-Thin.ttf */; };
+		5D0B359822964BF3008B24A6 /* IBMPlexSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356A22964BF3008B24A6 /* IBMPlexSans-ThinItalic.ttf */; };
+		5D0B359922964BF3008B24A6 /* IBMPlexSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356B22964BF3008B24A6 /* IBMPlexSans-BoldItalic.ttf */; };
+		5D0B359A22964BF3008B24A6 /* IBMPlexSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356C22964BF3008B24A6 /* IBMPlexSans-Light.ttf */; };
+		5D0B359B22964BF3008B24A6 /* IBMPlexSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356D22964BF3008B24A6 /* IBMPlexSans-Italic.ttf */; };
+		5D0B359C22964BF3008B24A6 /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356E22964BF3008B24A6 /* IBMPlexSans-Regular.ttf */; };
+		5D0B359D22964BF3008B24A6 /* IBMPlexSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356F22964BF3008B24A6 /* IBMPlexSans-ExtraLightItalic.ttf */; };
+		5D0B359E22964BF3008B24A6 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B357022964BF3008B24A6 /* IBMPlexSans-Bold.ttf */; };
+		5D0B359F22964BF3008B24A6 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357222964BF3008B24A6 /* Utils.h */; };
+		5D0B35A022964BF3008B24A6 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357322964BF3008B24A6 /* Utils.m */; };
+		5D0B35A122964BF3008B24A6 /* ConfigMaskingCallModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357522964BF3008B24A6 /* ConfigMaskingCallModel.h */; };
+		5D0B35A222964BF3008B24A6 /* CalloutNumberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357622964BF3008B24A6 /* CalloutNumberModel.m */; };
+		5D0B35A322964BF3008B24A6 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357722964BF3008B24A6 /* UserModel.m */; };
+		5D0B35A422964BF3008B24A6 /* CalloutNumberModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357822964BF3008B24A6 /* CalloutNumberModel.h */; };
+		5D0B35A522964BF3008B24A6 /* ConfigMaskingCallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357922964BF3008B24A6 /* ConfigMaskingCallModel.m */; };
+		5D0B35A622964BF3008B24A6 /* UserModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357A22964BF3008B24A6 /* UserModel.h */; };
+		5D0B35A722964BF3008B24A6 /* CallingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B357C22964BF3008B24A6 /* CallingViewController.xib */; };
+		5D0B35A822964BF3008B24A6 /* CallingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357D22964BF3008B24A6 /* CallingViewController.h */; };
+		5D0B35A922964BF3008B24A6 /* CallingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357E22964BF3008B24A6 /* CallingViewController.m */; };
+		5D0B35AA22964BF3008B24A6 /* CallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358022964BF3008B24A6 /* CallManager.m */; };
+		5D0B35AB22964BF3008B24A6 /* StringeeImplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358122964BF3008B24A6 /* StringeeImplement.m */; };
+		5D0B35AC22964BF3008B24A6 /* SPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358222964BF3008B24A6 /* SPManager.m */; };
+		5D0B35AD22964BF3008B24A6 /* SPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358322964BF3008B24A6 /* SPManager.h */; };
+		5D0B35AE22964BF3008B24A6 /* StringeeImplement.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358422964BF3008B24A6 /* StringeeImplement.h */; };
+		5D0B35AF22964BF3008B24A6 /* CallManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358522964BF3008B24A6 /* CallManager.h */; };
+		5D0B35B022964BF3008B24A6 /* PulsingAnimationCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358622964BF3008B24A6 /* PulsingAnimationCall.swift */; };
+		5D0B35B122964BF3008B24A6 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358822964BF3008B24A6 /* HTTPClient.m */; };
+		5D0B35B222964BF3008B24A6 /* GlobalService.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358922964BF3008B24A6 /* GlobalService.h */; };
+		5D0B35B322964BF3008B24A6 /* HTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B358A22964BF3008B24A6 /* HTTPClient.h */; };
+		5D0B35B422964BF3008B24A6 /* GlobalService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B358B22964BF3008B24A6 /* GlobalService.m */; };
+		5D0B35B722964DE6008B24A6 /* BeCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35B522964DE6008B24A6 /* BeCommon.h */; };
+		5D0B35B822964DE6008B24A6 /* BeCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B35B622964DE6008B24A6 /* BeCommon.m */; };
+		5D0B35BB22964E56008B24A6 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35B922964E56008B24A6 /* Reachability.h */; };
+		5D0B35BC22964E56008B24A6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B35BA22964E56008B24A6 /* Reachability.m */; };
+		5D0B35BF22965159008B24A6 /* BeCustomerInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35BD22965159008B24A6 /* BeCustomerInfoModel.h */; };
+		5D0B35C022965159008B24A6 /* BeCustomerInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B35BE22965159008B24A6 /* BeCustomerInfoModel.m */; };
+		5D0B35C322965177008B24A6 /* RideInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B35C122965177008B24A6 /* RideInfoModel.h */; };
+		5D0B35C422965177008B24A6 /* RideInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B35C222965177008B24A6 /* RideInfoModel.m */; };
+		5D0B35CA22965978008B24A6 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B35C922965978008B24A6 /* Image.xcassets */; };
 		5DD59442229446AE004220B0 /* BeMaskingCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD59440229446AE004220B0 /* BeMaskingCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DD594F522948449004220B0 /* DemoStringee.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD594F322948449004220B0 /* DemoStringee.h */; };
-		5DD594F622948449004220B0 /* DemoStringee.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD594F422948449004220B0 /* DemoStringee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0B355D22964BF3008B24A6 /* busy_signal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = busy_signal.mp3; sourceTree = "<group>"; };
+		5D0B355E22964BF3008B24A6 /* outgoing_tone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = outgoing_tone.mp3; sourceTree = "<group>"; };
+		5D0B355F22964BF3008B24A6 /* end_call_tututu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = end_call_tututu.caf; sourceTree = "<group>"; };
+		5D0B356022964BF3008B24A6 /* incoming_call.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = incoming_call.aif; sourceTree = "<group>"; };
+		5D0B356222964BF3008B24A6 /* IBMPlexSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		5D0B356322964BF3008B24A6 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
+		5D0B356422964BF3008B24A6 /* IBMPlexSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		5D0B356522964BF3008B24A6 /* IBMPlexSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		5D0B356622964BF3008B24A6 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		5D0B356722964BF3008B24A6 /* IBMPlexSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		5D0B356822964BF3008B24A6 /* IBMPlexSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5D0B356922964BF3008B24A6 /* IBMPlexSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Thin.ttf"; sourceTree = "<group>"; };
+		5D0B356A22964BF3008B24A6 /* IBMPlexSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		5D0B356B22964BF3008B24A6 /* IBMPlexSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		5D0B356C22964BF3008B24A6 /* IBMPlexSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Light.ttf"; sourceTree = "<group>"; };
+		5D0B356D22964BF3008B24A6 /* IBMPlexSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Italic.ttf"; sourceTree = "<group>"; };
+		5D0B356E22964BF3008B24A6 /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
+		5D0B356F22964BF3008B24A6 /* IBMPlexSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		5D0B357022964BF3008B24A6 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
+		5D0B357222964BF3008B24A6 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		5D0B357322964BF3008B24A6 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		5D0B357522964BF3008B24A6 /* ConfigMaskingCallModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigMaskingCallModel.h; sourceTree = "<group>"; };
+		5D0B357622964BF3008B24A6 /* CalloutNumberModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutNumberModel.m; sourceTree = "<group>"; };
+		5D0B357722964BF3008B24A6 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		5D0B357822964BF3008B24A6 /* CalloutNumberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutNumberModel.h; sourceTree = "<group>"; };
+		5D0B357922964BF3008B24A6 /* ConfigMaskingCallModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigMaskingCallModel.m; sourceTree = "<group>"; };
+		5D0B357A22964BF3008B24A6 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		5D0B357C22964BF3008B24A6 /* CallingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallingViewController.xib; sourceTree = "<group>"; };
+		5D0B357D22964BF3008B24A6 /* CallingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallingViewController.h; sourceTree = "<group>"; };
+		5D0B357E22964BF3008B24A6 /* CallingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallingViewController.m; sourceTree = "<group>"; };
+		5D0B358022964BF3008B24A6 /* CallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallManager.m; sourceTree = "<group>"; };
+		5D0B358122964BF3008B24A6 /* StringeeImplement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringeeImplement.m; sourceTree = "<group>"; };
+		5D0B358222964BF3008B24A6 /* SPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPManager.m; sourceTree = "<group>"; };
+		5D0B358322964BF3008B24A6 /* SPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPManager.h; sourceTree = "<group>"; };
+		5D0B358422964BF3008B24A6 /* StringeeImplement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringeeImplement.h; sourceTree = "<group>"; };
+		5D0B358522964BF3008B24A6 /* CallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallManager.h; sourceTree = "<group>"; };
+		5D0B358622964BF3008B24A6 /* PulsingAnimationCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulsingAnimationCall.swift; sourceTree = "<group>"; };
+		5D0B358822964BF3008B24A6 /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		5D0B358922964BF3008B24A6 /* GlobalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalService.h; sourceTree = "<group>"; };
+		5D0B358A22964BF3008B24A6 /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		5D0B358B22964BF3008B24A6 /* GlobalService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalService.m; sourceTree = "<group>"; };
+		5D0B35B522964DE6008B24A6 /* BeCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeCommon.h; sourceTree = "<group>"; };
+		5D0B35B622964DE6008B24A6 /* BeCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeCommon.m; sourceTree = "<group>"; };
+		5D0B35B922964E56008B24A6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		5D0B35BA22964E56008B24A6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		5D0B35BD22965159008B24A6 /* BeCustomerInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeCustomerInfoModel.h; sourceTree = "<group>"; };
+		5D0B35BE22965159008B24A6 /* BeCustomerInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeCustomerInfoModel.m; sourceTree = "<group>"; };
+		5D0B35C122965177008B24A6 /* RideInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RideInfoModel.h; sourceTree = "<group>"; };
+		5D0B35C222965177008B24A6 /* RideInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RideInfoModel.m; sourceTree = "<group>"; };
+		5D0B35C922965978008B24A6 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		5DD5943D229446AE004220B0 /* BeMaskingCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BeMaskingCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD59440229446AE004220B0 /* BeMaskingCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeMaskingCall.h; sourceTree = "<group>"; };
 		5DD59441229446AE004220B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DD594F322948449004220B0 /* DemoStringee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoStringee.h; sourceTree = "<group>"; };
-		5DD594F422948449004220B0 /* DemoStringee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoStringee.m; sourceTree = "<group>"; };
 		C60E4C9CEF43DF2DACC85A6A /* Pods-BeMaskingCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeMaskingCall.release.xcconfig"; path = "Target Support Files/Pods-BeMaskingCall/Pods-BeMaskingCall.release.xcconfig"; sourceTree = "<group>"; };
 		C947B94A736CD1545F333261 /* Pods-BeMaskingCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeMaskingCall.debug.xcconfig"; path = "Target Support Files/Pods-BeMaskingCall/Pods-BeMaskingCall.debug.xcconfig"; sourceTree = "<group>"; };
 		DBE3C2D63A2B7C86B8F2771E /* Pods_BeMaskingCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeMaskingCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +132,118 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D0B355B22964BF3008B24A6 /* MaskingCall */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B355C22964BF3008B24A6 /* Resources */,
+				5D0B356122964BF3008B24A6 /* IBM_Plex_Sans */,
+				5D0B357122964BF3008B24A6 /* Utils */,
+				5D0B357422964BF3008B24A6 /* Models */,
+				5D0B357B22964BF3008B24A6 /* CallingVC */,
+				5D0B357F22964BF3008B24A6 /* Base */,
+				5D0B358722964BF3008B24A6 /* Services */,
+			);
+			path = MaskingCall;
+			sourceTree = "<group>";
+		};
+		5D0B355C22964BF3008B24A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B355D22964BF3008B24A6 /* busy_signal.mp3 */,
+				5D0B355E22964BF3008B24A6 /* outgoing_tone.mp3 */,
+				5D0B355F22964BF3008B24A6 /* end_call_tututu.caf */,
+				5D0B356022964BF3008B24A6 /* incoming_call.aif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D0B356122964BF3008B24A6 /* IBM_Plex_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B356222964BF3008B24A6 /* IBMPlexSans-SemiBoldItalic.ttf */,
+				5D0B356322964BF3008B24A6 /* IBMPlexSans-Medium.ttf */,
+				5D0B356422964BF3008B24A6 /* IBMPlexSans-SemiBold.ttf */,
+				5D0B356522964BF3008B24A6 /* IBMPlexSans-MediumItalic.ttf */,
+				5D0B356622964BF3008B24A6 /* OFL.txt */,
+				5D0B356722964BF3008B24A6 /* IBMPlexSans-LightItalic.ttf */,
+				5D0B356822964BF3008B24A6 /* IBMPlexSans-ExtraLight.ttf */,
+				5D0B356922964BF3008B24A6 /* IBMPlexSans-Thin.ttf */,
+				5D0B356A22964BF3008B24A6 /* IBMPlexSans-ThinItalic.ttf */,
+				5D0B356B22964BF3008B24A6 /* IBMPlexSans-BoldItalic.ttf */,
+				5D0B356C22964BF3008B24A6 /* IBMPlexSans-Light.ttf */,
+				5D0B356D22964BF3008B24A6 /* IBMPlexSans-Italic.ttf */,
+				5D0B356E22964BF3008B24A6 /* IBMPlexSans-Regular.ttf */,
+				5D0B356F22964BF3008B24A6 /* IBMPlexSans-ExtraLightItalic.ttf */,
+				5D0B357022964BF3008B24A6 /* IBMPlexSans-Bold.ttf */,
+			);
+			path = IBM_Plex_Sans;
+			sourceTree = "<group>";
+		};
+		5D0B357122964BF3008B24A6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B357222964BF3008B24A6 /* Utils.h */,
+				5D0B357322964BF3008B24A6 /* Utils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5D0B357422964BF3008B24A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B357522964BF3008B24A6 /* ConfigMaskingCallModel.h */,
+				5D0B357922964BF3008B24A6 /* ConfigMaskingCallModel.m */,
+				5D0B357822964BF3008B24A6 /* CalloutNumberModel.h */,
+				5D0B357622964BF3008B24A6 /* CalloutNumberModel.m */,
+				5D0B357A22964BF3008B24A6 /* UserModel.h */,
+				5D0B357722964BF3008B24A6 /* UserModel.m */,
+				5D0B35BD22965159008B24A6 /* BeCustomerInfoModel.h */,
+				5D0B35BE22965159008B24A6 /* BeCustomerInfoModel.m */,
+				5D0B35C122965177008B24A6 /* RideInfoModel.h */,
+				5D0B35C222965177008B24A6 /* RideInfoModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D0B357B22964BF3008B24A6 /* CallingVC */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B357C22964BF3008B24A6 /* CallingViewController.xib */,
+				5D0B357D22964BF3008B24A6 /* CallingViewController.h */,
+				5D0B357E22964BF3008B24A6 /* CallingViewController.m */,
+			);
+			path = CallingVC;
+			sourceTree = "<group>";
+		};
+		5D0B357F22964BF3008B24A6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B358422964BF3008B24A6 /* StringeeImplement.h */,
+				5D0B358122964BF3008B24A6 /* StringeeImplement.m */,
+				5D0B358322964BF3008B24A6 /* SPManager.h */,
+				5D0B358222964BF3008B24A6 /* SPManager.m */,
+				5D0B358522964BF3008B24A6 /* CallManager.h */,
+				5D0B358022964BF3008B24A6 /* CallManager.m */,
+				5D0B358622964BF3008B24A6 /* PulsingAnimationCall.swift */,
+				5D0B35B522964DE6008B24A6 /* BeCommon.h */,
+				5D0B35B622964DE6008B24A6 /* BeCommon.m */,
+				5D0B35B922964E56008B24A6 /* Reachability.h */,
+				5D0B35BA22964E56008B24A6 /* Reachability.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5D0B358722964BF3008B24A6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5D0B358A22964BF3008B24A6 /* HTTPClient.h */,
+				5D0B358822964BF3008B24A6 /* HTTPClient.m */,
+				5D0B358922964BF3008B24A6 /* GlobalService.h */,
+				5D0B358B22964BF3008B24A6 /* GlobalService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5DD59433229446AE004220B0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				5DD59440229446AE004220B0 /* BeMaskingCall.h */,
-				5DD594F322948449004220B0 /* DemoStringee.h */,
-				5DD594F422948449004220B0 /* DemoStringee.m */,
+				5D0B355B22964BF3008B24A6 /* MaskingCall */,
 				5DD59441229446AE004220B0 /* Info.plist */,
+				5D0B35C922965978008B24A6 /* Image.xcassets */,
 			);
 			path = BeMaskingCall;
 			sourceTree = "<group>";
@@ -89,8 +297,21 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DD594F522948449004220B0 /* DemoStringee.h in Headers */,
+				5D0B35AD22964BF3008B24A6 /* SPManager.h in Headers */,
+				5D0B35BB22964E56008B24A6 /* Reachability.h in Headers */,
+				5D0B35A422964BF3008B24A6 /* CalloutNumberModel.h in Headers */,
+				5D0B35BF22965159008B24A6 /* BeCustomerInfoModel.h in Headers */,
+				5D0B35AF22964BF3008B24A6 /* CallManager.h in Headers */,
+				5D0B35B222964BF3008B24A6 /* GlobalService.h in Headers */,
+				5D0B35B722964DE6008B24A6 /* BeCommon.h in Headers */,
+				5D0B35A622964BF3008B24A6 /* UserModel.h in Headers */,
+				5D0B359F22964BF3008B24A6 /* Utils.h in Headers */,
+				5D0B35C322965177008B24A6 /* RideInfoModel.h in Headers */,
+				5D0B35A122964BF3008B24A6 /* ConfigMaskingCallModel.h in Headers */,
+				5D0B35AE22964BF3008B24A6 /* StringeeImplement.h in Headers */,
+				5D0B35A822964BF3008B24A6 /* CallingViewController.h in Headers */,
 				5DD59442229446AE004220B0 /* BeMaskingCall.h in Headers */,
+				5D0B35B322964BF3008B24A6 /* HTTPClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +374,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D0B359C22964BF3008B24A6 /* IBMPlexSans-Regular.ttf in Resources */,
+				5D0B359A22964BF3008B24A6 /* IBMPlexSans-Light.ttf in Resources */,
+				5D0B359522964BF3008B24A6 /* IBMPlexSans-LightItalic.ttf in Resources */,
+				5D0B359122964BF3008B24A6 /* IBMPlexSans-Medium.ttf in Resources */,
+				5D0B359822964BF3008B24A6 /* IBMPlexSans-ThinItalic.ttf in Resources */,
+				5D0B359022964BF3008B24A6 /* IBMPlexSans-SemiBoldItalic.ttf in Resources */,
+				5D0B359D22964BF3008B24A6 /* IBMPlexSans-ExtraLightItalic.ttf in Resources */,
+				5D0B359922964BF3008B24A6 /* IBMPlexSans-BoldItalic.ttf in Resources */,
+				5D0B359322964BF3008B24A6 /* IBMPlexSans-MediumItalic.ttf in Resources */,
+				5D0B359422964BF3008B24A6 /* OFL.txt in Resources */,
+				5D0B359E22964BF3008B24A6 /* IBMPlexSans-Bold.ttf in Resources */,
+				5D0B359622964BF3008B24A6 /* IBMPlexSans-ExtraLight.ttf in Resources */,
+				5D0B359222964BF3008B24A6 /* IBMPlexSans-SemiBold.ttf in Resources */,
+				5D0B358D22964BF3008B24A6 /* outgoing_tone.mp3 in Resources */,
+				5D0B359B22964BF3008B24A6 /* IBMPlexSans-Italic.ttf in Resources */,
+				5D0B35A722964BF3008B24A6 /* CallingViewController.xib in Resources */,
+				5D0B358C22964BF3008B24A6 /* busy_signal.mp3 in Resources */,
+				5D0B358F22964BF3008B24A6 /* incoming_call.aif in Resources */,
+				5D0B359722964BF3008B24A6 /* IBMPlexSans-Thin.ttf in Resources */,
+				5D0B35CA22965978008B24A6 /* Image.xcassets in Resources */,
+				5D0B358E22964BF3008B24A6 /* end_call_tututu.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +430,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DD594F622948449004220B0 /* DemoStringee.m in Sources */,
+				5D0B35BC22964E56008B24A6 /* Reachability.m in Sources */,
+				5D0B35A522964BF3008B24A6 /* ConfigMaskingCallModel.m in Sources */,
+				5D0B35A022964BF3008B24A6 /* Utils.m in Sources */,
+				5D0B35A222964BF3008B24A6 /* CalloutNumberModel.m in Sources */,
+				5D0B35A922964BF3008B24A6 /* CallingViewController.m in Sources */,
+				5D0B35AC22964BF3008B24A6 /* SPManager.m in Sources */,
+				5D0B35C022965159008B24A6 /* BeCustomerInfoModel.m in Sources */,
+				5D0B35B822964DE6008B24A6 /* BeCommon.m in Sources */,
+				5D0B35B422964BF3008B24A6 /* GlobalService.m in Sources */,
+				5D0B35C422965177008B24A6 /* RideInfoModel.m in Sources */,
+				5D0B35B022964BF3008B24A6 /* PulsingAnimationCall.swift in Sources */,
+				5D0B35AB22964BF3008B24A6 /* StringeeImplement.m in Sources */,
+				5D0B35A322964BF3008B24A6 /* UserModel.m in Sources */,
+				5D0B35B122964BF3008B24A6 /* HTTPClient.m in Sources */,
+				5D0B35AA22964BF3008B24A6 /* CallManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,8 +591,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.be.BeMaskingCall;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -363,7 +620,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.be.BeMaskingCall;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

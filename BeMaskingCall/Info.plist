@@ -18,5 +18,26 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) uses Camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>$(PRODUCT_NAME) uses Microphone</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>IBMPlexSans-Bold.ttf</string>
+		<string>IBMPlexSans-BoldItalic.ttf</string>
+		<string>IBMPlexSans-ExtraLight.ttf</string>
+		<string>IBMPlexSans-ExtraLightItalic.ttf</string>
+		<string>IBMPlexSans-Italic.ttf</string>
+		<string>IBMPlexSans-Light.ttf</string>
+		<string>IBMPlexSans-LightItalic.ttf</string>
+		<string>IBMPlexSans-Medium.ttf</string>
+		<string>IBMPlexSans-MediumItalic.ttf</string>
+		<string>IBMPlexSans-Regular.ttf</string>
+		<string>IBMPlexSans-SemiBold.ttf</string>
+		<string>IBMPlexSans-SemiBoldItalic.ttf</string>
+		<string>IBMPlexSans-Thin.ttf</string>
+		<string>IBMPlexSans-ThinItalic.ttf</string>
+	</array>
 </dict>
 </plist>
