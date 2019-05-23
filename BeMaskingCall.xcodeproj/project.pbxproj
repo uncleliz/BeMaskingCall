@@ -27,7 +27,7 @@
 		5D0B359C22964BF3008B24A6 /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356E22964BF3008B24A6 /* IBMPlexSans-Regular.ttf */; };
 		5D0B359D22964BF3008B24A6 /* IBMPlexSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B356F22964BF3008B24A6 /* IBMPlexSans-ExtraLightItalic.ttf */; };
 		5D0B359E22964BF3008B24A6 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B357022964BF3008B24A6 /* IBMPlexSans-Bold.ttf */; };
-		5D0B359F22964BF3008B24A6 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357222964BF3008B24A6 /* Utils.h */; };
+		5D0B359F22964BF3008B24A6 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357222964BF3008B24A6 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35A022964BF3008B24A6 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357322964BF3008B24A6 /* Utils.m */; };
 		5D0B35A122964BF3008B24A6 /* ConfigMaskingCallModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0B357522964BF3008B24A6 /* ConfigMaskingCallModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0B35A222964BF3008B24A6 /* CalloutNumberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B357622964BF3008B24A6 /* CalloutNumberModel.m */; };
