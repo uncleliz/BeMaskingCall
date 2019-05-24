@@ -37,6 +37,7 @@
                 <outlet property="labelUsername" destination="eKV-lM-vxF" id="FuS-gY-cmZ"/>
                 <outlet property="lbConnectingVC" destination="XgT-FC-ov9" id="QWr-GR-4kM"/>
                 <outlet property="lbRequestVideo" destination="X4V-qk-hSa" id="A9O-t7-5gl"/>
+                <outlet property="lbTitle" destination="hng-PZ-DPb" id="Toz-od-qaR"/>
                 <outlet property="lbUserNameVC" destination="FAr-c0-rY1" id="91K-RK-QLx"/>
                 <outlet property="localView" destination="CdO-2Q-Inw" id="P6O-Db-U0s"/>
                 <outlet property="optionView" destination="EMh-2x-Vad" id="3Kf-kJ-qfu"/>
@@ -54,19 +55,22 @@
             <subviews>
                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wi2-fX-NqB">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exe-rm-9mR">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CdO-2Q-Inw">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02" translatesAutoresizingMaskIntoConstraints="NO" id="RHI-mz-LT4">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="RHI-mz-LT4">
+                    <rect key="frame" x="0.0" y="45" width="320" height="478.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="RHI-mz-LT4" secondAttribute="height" multiplier="1:1.5" constant="1" id="JuL-nz-NyH"/>
+                    </constraints>
                 </imageView>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwr-no-aQO">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -265,7 +269,6 @@
                 <constraint firstItem="Wi2-fX-NqB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ET9-CX-al4"/>
                 <constraint firstItem="IOp-pU-Nqa" firstAttribute="width" secondItem="PrX-2e-PhU" secondAttribute="width" id="G4M-TE-QDL"/>
                 <constraint firstItem="cS4-qJ-wkC" firstAttribute="centerY" secondItem="PrX-2e-PhU" secondAttribute="centerY" id="H9D-MG-zC9"/>
-                <constraint firstAttribute="bottom" secondItem="RHI-mz-LT4" secondAttribute="bottom" id="I8b-PL-HvM"/>
                 <constraint firstItem="zXx-en-kzM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JPR-Ge-2wn"/>
                 <constraint firstItem="EMh-2x-Vad" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="N7L-1S-twe"/>
                 <constraint firstItem="bwr-no-aQO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Sid-hq-119"/>
@@ -280,9 +283,9 @@
                 <constraint firstItem="IOp-pU-Nqa" firstAttribute="centerY" secondItem="PrX-2e-PhU" secondAttribute="centerY" id="eg0-nL-GVK"/>
                 <constraint firstItem="fgA-eh-dHq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="f5o-jo-Blc"/>
                 <constraint firstItem="Exe-rm-9mR" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ffo-3D-Kh1"/>
-                <constraint firstItem="RHI-mz-LT4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fqg-IB-5SC"/>
                 <constraint firstItem="fgA-eh-dHq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="gVZ-lD-k30"/>
                 <constraint firstItem="Exe-rm-9mR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ijd-WO-c86"/>
+                <constraint firstItem="RHI-mz-LT4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jxE-aN-5b8"/>
                 <constraint firstItem="cS4-qJ-wkC" firstAttribute="width" secondItem="PrX-2e-PhU" secondAttribute="width" id="m4H-5V-NAL"/>
                 <constraint firstItem="Exe-rm-9mR" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="mNE-5v-9C9"/>
                 <constraint firstItem="Exe-rm-9mR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pnu-Dz-Hkp"/>
@@ -295,7 +298,7 @@
         </view>
     </objects>
     <resources>
-        <image name="02" width="360" height="640"/>
+        <image name="bg_ellipse" width="1440" height="2040"/>
         <image name="call_end_call" width="264" height="264"/>
         <image name="camera_switch" width="32" height="32"/>
         <image name="exellent" width="26" height="27"/>

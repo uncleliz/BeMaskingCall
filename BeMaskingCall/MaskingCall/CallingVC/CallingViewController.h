@@ -66,6 +66,7 @@ typedef NS_ENUM(NSInteger, ScreenMode) {
 @property (weak, nonatomic) IBOutlet UIButton *btCamera;
 @property (weak, nonatomic) IBOutlet UILabel *lbRequestVideo;
 @property (weak, nonatomic) IBOutlet UIImageView *imgBackground;
+@property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *from;

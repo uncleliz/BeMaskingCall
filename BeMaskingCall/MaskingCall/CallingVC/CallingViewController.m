@@ -14,6 +14,7 @@
 #import "BeCommon.h"
 #import <Stringee/Stringee.h>
 #import "CallManager.h"
+#import "MKEventTracking.h"
 static int TIME_WINDOW = 2;
 static int CALL_TIME_OUT = 15; // giây
 
@@ -57,6 +58,7 @@ static int CALL_TIME_OUT = 15; // giây
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
     //use pulsing
     [self setuPulsing];
     [SPManager instance].callingViewController = self;
@@ -147,9 +149,6 @@ static int CALL_TIME_OUT = 15; // giây
                 }
             }];
             // truoc khi start outgoing thi phai close systemcall truoc do
-//            if ([[SPManager instance] isSystemCall]) {
-//                [[CallManager sharedInstance] endCall];
-//            }
             [[CallManager sharedInstance] startCallWithPhoneNumber:self.to calleeName:self.username isVideoCall:self.isVideoCall engagementID:self.engagementID];
         }
         
@@ -179,16 +178,16 @@ static int CALL_TIME_OUT = 15; // giây
 - (IBAction)speakerTapped:(UIButton *)sender {
     
     if (isSpeaker) {
-        [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:@"icon_speaker"] forState:UIControlStateNormal];
+        [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOff] forState:UIControlStateNormal];
         [[StringeeAudioManager instance] setLoudspeaker:NO];
         isSpeaker = NO;
         
     } else {
-        [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:@"icon_speaker_selected"] forState:UIControlStateNormal];
+        [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOn] forState:UIControlStateNormal];
         [[StringeeAudioManager instance] setLoudspeaker:YES];
         isSpeaker = YES;
     }
-//    [[EventTrackingManager shared] pushEventWithEventName:_isIncomingCall?@"customer_receive_call_tap_speaker":@"customer_call_tap_speaker" params:@{@"speaker_status": isSpeaker?@"on":@"off"} type:EventTrackerTypeGgAnalytics];
+    [[MKEventTracking instance] pushEventWithEventName:_isIncomingCall?[SPManager instance].callingModel.strTracking_Receive_Call_Tap_Speaker:[SPManager instance].callingModel.strTracking_Call_Tap_Speaker params:@{@"speaker_status": isSpeaker?@"on":@"off"}];
 
 }
 
@@ -361,13 +360,13 @@ static int CALL_TIME_OUT = 15; // giây
     if (isMute) {
         [self.stringeeCall mute:NO];
         isMute = NO;
-        [self.buttonMute setBackgroundImage:[UIImage imageNamed:@"icon_mute"] forState:UIControlStateNormal];
+        [self.buttonMute setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgMuteOff] forState:UIControlStateNormal];
     } else {
         [self.stringeeCall mute:YES];
         isMute = YES;
-        [self.buttonMute setBackgroundImage:[UIImage imageNamed:@"icon_mute_selected"] forState:UIControlStateNormal];
+        [self.buttonMute setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgMuteOn] forState:UIControlStateNormal];
     }
-//    [[EventTrackingManager shared] pushEventWithEventName:_isIncomingCall?@"customer_receive_call_tap_mute":@"customer_call_tap_mute" params:@{@"mute_status": isMute?@"on":@"off"} type:EventTrackerTypeGgAnalytics];
+    [[MKEventTracking instance] pushEventWithEventName:_isIncomingCall?[SPManager instance].callingModel.strTracking_Receive_Call_Tap_Mute:[SPManager instance].callingModel.strTracking_Call_Tap_Mute params:@{@"mute_status": isMute?@"on":@"off"}];
 }
 
 // Show thông báo và kết thúc cuộc gọi
@@ -390,8 +389,7 @@ static int CALL_TIME_OUT = 15; // giây
     timeoutTimer = nil;
     
     int call_diration = timeMin*60 + timeSec;
-//    [[EventTrackingManager shared] pushEventWithEventName:_isIncomingCall?@"customer_receive_call_tap_end":@"customer_call_tap_end" params:@{@"call_duration": [NSNumber numberWithInt:call_diration]} type:EventTrackerTypeGgAnalytics];
-    
+    [[MKEventTracking instance] pushEventWithEventName:_isIncomingCall?[SPManager instance].callingModel.strTracking_Receive_Call_Tap_End:[SPManager instance].callingModel.strTracking_Call_Tap_End params:@{@"call_duration": [NSNumber numberWithInt:call_diration]}];
     [Utils delayCallback:^{
         UIViewController *vc = self.presentingViewController;
         while (vc.presentingViewController) {
@@ -592,14 +590,15 @@ static int CALL_TIME_OUT = 15; // giây
         
         for( AVAudioSessionPortDescription *portDescription in route.outputs ) {
             if ([portDescription.portType isEqualToString:AVAudioSessionPortBuiltInSpeaker]) {
-                [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:@"icon_speaker_selected"] forState:UIControlStateNormal];
+                [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOn] forState:UIControlStateNormal];
                 self->isSpeaker = YES;
-//                [[EventTrackingManager shared] pushEventWithEventName:_isIncomingCall?@"customer_receive_call_tap_speaker":@"customer_call_tap_speaker" params:@{@"speaker_status": isSpeaker?@"on":@"off"} type:EventTrackerTypeGgAnalytics];
+                [[MKEventTracking instance] pushEventWithEventName:self->_isIncomingCall?[SPManager instance].callingModel.strTracking_Receive_Call_Tap_Speaker:[SPManager instance].callingModel.strTracking_Call_Tap_Speaker params:@{@"speaker_status": self->isSpeaker?@"on":@"off"}];
+
                 return;
             } else {
-                [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:@"icon_speaker"] forState:UIControlStateNormal];
+                [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOff] forState:UIControlStateNormal];
                 self->isSpeaker = NO;
-//                [[EventTrackingManager shared] pushEventWithEventName:_isIncomingCall?@"customer_receive_call_tap_speaker":@"customer_call_tap_speaker" params:@{@"speaker_status": isSpeaker?@"on":@"off"} type:EventTrackerTypeGgAnalytics];
+                [[MKEventTracking instance] pushEventWithEventName:self->_isIncomingCall?[SPManager instance].callingModel.strTracking_Receive_Call_Tap_Speaker:[SPManager instance].callingModel.strTracking_Call_Tap_Speaker params:@{@"speaker_status": self->isSpeaker?@"on":@"off"}];
                 return;
             }
         }
@@ -1068,6 +1067,14 @@ static int CALL_TIME_OUT = 15; // giây
 }
 //MARK: - show alert when timeout
 - (void)showCustomAlertViewTimeout {
+    if(!self.isIncomingCall)
+    {
+        if ([SPManager instance].delegate && [[SPManager instance].delegate respondsToSelector:@selector(showAlertViewGoingOutTimeoutEngagementID:)]) {
+            [[SPManager instance].delegate showAlertViewGoingOutTimeoutEngagementID:self.engagementID];
+        }
+    }
+
+    
 //    if(!self.isIncomingCall)
 //    {
 //    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:@"" andMessage:@"Cuộc gọi miễn phí không thể thực hiện do vấn đề kết nối mạng từ người nhận. Chuyển sang cuộc gọi thông thường"];
@@ -1092,44 +1099,45 @@ static int CALL_TIME_OUT = 15; // giây
 }
 -(void)callDriverPhoneNumber
 {
-//    if ([self.engagementID isEqualToString:[[CommonFunctions shareCommonMethods] passValidString:[FindDriverManager handleDriverManager].rideInfoDictionary.engagementID]]) {
-//        if ([NSString stringWithFormat:@"%@",[FindDriverManager handleDriverManager].rideInfoDictionary.rideInProgress].length != 0) {
-//            //1. In case masking feature is ON: The app calls OS default dialer and auto fill masking phone number. => after that users can make a phone to phone call
-//            //2. In case masking feature is OFF/Unknown: The app calls OS default dialer and auto fill driver phone number. => after that users can make a phone to phone call
-//            NSString *strDriverPhoneNumber = [[SPManager instance] getNumberMaskWithTrip:[FindDriverManager handleDriverManager].rideInfoDictionary.engagementID withDriverPhoneNumber:[FindDriverManager handleDriverManager].rideInfoDictionary.driverPhoneNumber];
-//            NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",strDriverPhoneNumber]];
-//            if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
-//                //            NSString *logEventString = @"Call to driver made when not arrived";
-//                //[[CommonFunctions shareCommonMethods] googleAnalyticsWithEventName:logEventString];
-//                [[UIApplication sharedApplication] openURL:phoneUrl];
-//                [[EventTrackingManager shared] pushEventWithEventName:@"ride_details_tap_on_call" params:@{
-//                                                                                                           @"ETA": [[NSUserDefaults standardUserDefaults] integerForKey:USER_RIDE_STATUS] == userRideStateDriverAcceptedRequest ? [FindDriverManager handleDriverManager].rideInfoDictionary.driverUpcomingTime : [FindDriverManager handleDriverManager].rideInfoDictionary.rideTime,
-//                                                                                                           @"vehicle_type": ([FindDriverManager handleDriverManager].selectedVehicleType == VEEP_VEHICAL_TYPE_TWO_WHEEL_CARRY_PEOPLE ? @"bike": ([FindDriverManager handleDriverManager].selectedVehicleType == VEEP_VEHICAL_TYPE_FOUR_SEATS ? @"4seat_car" : @"7seat_car"))
-//                                                                                                           } type:EventTrackerTypeGgAnalytics];
-//            } else {
-//                [[CommonFunctions shareCommonMethods] showCustomAlertViewFromCommonWithTitle:nil message:[ApplicationStrings Call_Facility_Unavailable] withButtonTitle:[ApplicationStrings ok]];
-//            }
-//        }
-//    }
-//    else
-//    {
-//        NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",@"1900232345"]];
-//        if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
-//            //            NSString *logEventString = @"Call to driver made when not arrived";
-//            //[[CommonFunctions shareCommonMethods] googleAnalyticsWithEventName:logEventString];
-//            [[UIApplication sharedApplication] openURL:phoneUrl];
-//        }
-//        else {
-//            [[CommonFunctions shareCommonMethods] showCustomAlertViewFromCommonWithTitle:nil message:[ApplicationStrings Call_Facility_Unavailable] withButtonTitle:[ApplicationStrings ok]];
-//        }
-//    }
+    /*
+    if ([self.engagementID isEqualToString:[[CommonFunctions shareCommonMethods] passValidString:[FindDriverManager handleDriverManager].rideInfoDictionary.engagementID]]) {
+        if ([NSString stringWithFormat:@"%@",[FindDriverManager handleDriverManager].rideInfoDictionary.rideInProgress].length != 0) {
+            //1. In case masking feature is ON: The app calls OS default dialer and auto fill masking phone number. => after that users can make a phone to phone call
+            //2. In case masking feature is OFF/Unknown: The app calls OS default dialer and auto fill driver phone number. => after that users can make a phone to phone call
+            NSString *strDriverPhoneNumber = [[SPManager instance] getNumberMaskWithTrip:[FindDriverManager handleDriverManager].rideInfoDictionary.engagementID withDriverPhoneNumber:[FindDriverManager handleDriverManager].rideInfoDictionary.driverPhoneNumber];
+            NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",strDriverPhoneNumber]];
+            if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+                //            NSString *logEventString = @"Call to driver made when not arrived";
+                //[[CommonFunctions shareCommonMethods] googleAnalyticsWithEventName:logEventString];
+                [[UIApplication sharedApplication] openURL:phoneUrl];
+                [[EventTrackingManager shared] pushEventWithEventName:@"ride_details_tap_on_call" params:@{
+                                                                                                           @"ETA": [[NSUserDefaults standardUserDefaults] integerForKey:USER_RIDE_STATUS] == userRideStateDriverAcceptedRequest ? [FindDriverManager handleDriverManager].rideInfoDictionary.driverUpcomingTime : [FindDriverManager handleDriverManager].rideInfoDictionary.rideTime,
+                                                                                                           @"vehicle_type": ([FindDriverManager handleDriverManager].selectedVehicleType == VEEP_VEHICAL_TYPE_TWO_WHEEL_CARRY_PEOPLE ? @"bike": ([FindDriverManager handleDriverManager].selectedVehicleType == VEEP_VEHICAL_TYPE_FOUR_SEATS ? @"4seat_car" : @"7seat_car"))
+                                                                                                           } type:EventTrackerTypeGgAnalytics];
+            } else {
+                [[CommonFunctions shareCommonMethods] showCustomAlertViewFromCommonWithTitle:nil message:[ApplicationStrings Call_Facility_Unavailable] withButtonTitle:[ApplicationStrings ok]];
+            }
+        }
+    }
+    else
+    {
+        NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",@"1900232345"]];
+        if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+            //            NSString *logEventString = @"Call to driver made when not arrived";
+            //[[CommonFunctions shareCommonMethods] googleAnalyticsWithEventName:logEventString];
+            [[UIApplication sharedApplication] openURL:phoneUrl];
+        }
+        else {
+            [[CommonFunctions shareCommonMethods] showCustomAlertViewFromCommonWithTitle:nil message:[ApplicationStrings Call_Facility_Unavailable] withButtonTitle:[ApplicationStrings ok]];
+        }
+    }
+     */
 }
 
 //MARK: - pulsing call
 -(void) setuPulsing
 {
     isAnablePulsing = YES;
-    self.view.backgroundColor = [Utils colorWithHexString:@"FFBB00"];
     if (/*!self.isIncomingCall && */isAnablePulsing == YES) {
         self.imgBackground.alpha = 0;
     }
@@ -1140,25 +1148,42 @@ static int CALL_TIME_OUT = 15; // giây
 }
 -(void) addPulsing
 {
-    if (/*!self.isIncomingCall && */self.isCalling == NO && isAnablePulsing == YES) {
-        self.imgBackground.alpha = 0;
+    self.imgBackground.alpha = 1;
+//    if (/*!self.isIncomingCall && */self.isCalling == NO && isAnablePulsing == YES) {
+//        self.imgBackground.alpha = 0;
 //        pulsingCall = [[PulsingAnimationCall alloc] init];
 //        [self.imgBackground.superview.layer insertSublayer:pulsingCall below:self.optionView.layer];
 //        CGPoint position = CGPointMake([UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height/2); //self.imgBackground.center;
 //        position.y = position.y - 20;
 //        pulsingCall.position = position;
 //        [pulsingCall start];
-    }
+//    }
 }
 -(void) removePulsing
 {
 //    if (pulsingCall && isAnablePulsing == YES) {
 //        [pulsingCall removeFromSuperlayer];
 //        pulsingCall = nil;
-        [UIView animateWithDuration:1.0 animations:^{
-            self.imgBackground.alpha = 1;
-        } completion:^(BOOL finished) {
-        }];
+//        [UIView animateWithDuration:1.0 animations:^{
+//            self.imgBackground.alpha = 1;
+//        } completion:^(BOOL finished) {
+//        }];
 //    }
+}
+-(void) setupUI
+{
+    [_buttonEndCall setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgDecline] forState:UIControlStateNormal];
+    [_buttonDecline setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgDecline] forState:UIControlStateNormal];
+    [_buttonAccept setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgAccept] forState:UIControlStateNormal];
+    [_buttonMute setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgMuteOff] forState:UIControlStateNormal];
+    [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOff] forState:UIControlStateNormal];
+    self.view.backgroundColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorBackground];
+    self.lbTitle.textColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorText];
+    self.labelUsername.textColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorText];
+    self.labelConnecting.textColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorText];
+    self.labelSpeaker.textColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorText];
+    self.labelMute.textColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorText];
+    
+    self.lbTitle.text = [SPManager instance].callingModel.strLabelTitle;
 }
 @end

@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString *driverID;
 @property(nonatomic, strong) NSString *engagementID;
 @property(nonatomic, strong) NSString *driverName;
+@property(nonatomic, strong) NSString *driverPhoneNumber;
 
 @end
 

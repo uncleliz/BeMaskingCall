@@ -65,7 +65,7 @@ static SPManager *spManager = nil;
                     @"Z" : @"Z",
                     @"W" : @"W"
                     };
-        
+        _callingModel =[[CallingVCModel alloc] init];
         //mld: disbale cache myuser
         _myUser = (UserModel *)[Utils readCustomObjFromUserDefaults:@"myUser"];
 //        _configMaskingCall = (ConfigMaskingCallModel *)[Utils readCustomObjFromUserDefaults:@"ConfigMaskingCall"];

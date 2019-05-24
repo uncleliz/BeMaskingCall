@@ -113,15 +113,15 @@ class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
         
         setupDefault()
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(onDidEnterBackground),
-                                               name: NSNotification.Name.UIApplicationDidEnterBackground,
-                                               object: nil)
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(onWillEnterForeground),
-                                               name: NSNotification.Name.UIApplicationWillEnterForeground,
-                                               object: nil)
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(onDidEnterBackground),
+//                                               name: NSNotification.Name.UIApplication.didEnterBackgroundNotification,
+//                                               object: nil)
+//
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(onWillEnterForeground),
+//                                               name: NSNotification.Name.UIApplication.willEnterForegroundNotification,
+//                                               object: nil)
     }
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -157,7 +157,7 @@ class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
         layer.strokeColor = strokeColor.cgColor
         layer.lineWidth = 20
         layer.fillColor = fillColor.cgColor
-        layer.lineCap = kCALineCapRound
+//        layer.lineCap = CAShapeLayerLineCap.round
 //        layer.position = self.center
         return layer
     }
@@ -165,7 +165,7 @@ class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
         let aGroup = CAAnimationGroup()
         aGroup.duration = animationDuration + pulseInterval
         aGroup.repeatCount = self.repeatCount
-        aGroup.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+//        aGroup.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
 
         let animation = CABasicAnimation(keyPath: "transform.scale.xy")
         animation.fromValue = fromValueForRadius

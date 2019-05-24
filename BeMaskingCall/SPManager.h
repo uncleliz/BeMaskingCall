@@ -14,6 +14,7 @@
 #import "BeCustomerInfoModel.h"
 #import "RideInfoModel.h"
 #import "CallingViewController.h"
+#import "CallingVCModel.h"
 typedef NS_ENUM(NSInteger, SyncStateCalling) {
     // Chưa có cuộc gọi
     SyncStateCallingNone,
@@ -24,11 +25,13 @@ typedef NS_ENUM(NSInteger, SyncStateCalling) {
     // Đang có cuộc gọi đên
     SyncStateCallingOutGoing,
 };
-
+@protocol SPManagerDelegate <NSObject>
+- (void) showAlertViewGoingOutTimeoutEngagementID:(NSString*)engagementID;
+@end
 @interface SPManager : NSObject
 
 + (SPManager *)instance;
-
+@property (nonatomic, weak) id<SPManagerDelegate> delegate;
 @property (strong, nonatomic) NSDictionary *allKeys;
 @property (strong, nonatomic) NSMutableArray *listKeys;
 @property (strong, nonatomic) NSMutableDictionary *dicSections;
@@ -52,6 +55,7 @@ typedef NS_ENUM(NSInteger, SyncStateCalling) {
 
 @property (nonatomic, strong) NSString *baseURLString;
 @property (nonatomic, strong) NSString *subUrlString;
+@property (strong, nonatomic) CallingVCModel *callingModel;
 
 -(void) getConfigMaskingCall;
 - (NSString *)getNumberForCallOut;
