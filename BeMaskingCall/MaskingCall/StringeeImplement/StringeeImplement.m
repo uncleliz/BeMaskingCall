@@ -167,7 +167,8 @@ static StringeeImplement *sharedMyManager = nil;
 // cuoc goi den
 -(void)openScreenCall:(StringeeCall *)stringeeCall
 {
-    CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:nil];
+    NSBundle *localBundle  = [NSBundle bundleForClass:[CallingViewController class]];
+    CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:localBundle];
     callingVC.isIncomingCall = YES;
     callingVC.username = stringeeCall.fromAlias;
     callingVC.stringeeCall = stringeeCall;
@@ -433,8 +434,9 @@ static StringeeImplement *sharedMyManager = nil;
         NSString *toNumber = (NSString*)dicDecode[@"callnumber"]; //[[CallManager sharedInstance] getPhoneNumberWithTokenCallKit:to];
         NSString *callName = (NSString*)dicDecode[@"callname"];//[[CallManager sharedInstance] getCallNamerWithTokenCallKit:to];
         NSString *engagementID = (NSString*)dicDecode[@"engagementid"];
-        
-        CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:nil];
+        NSBundle *localBundle  = [NSBundle bundleForClass:[CallingViewController class]];
+
+        CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:localBundle];
         callingVC.isIncomingCall = NO;
         callingVC.username = callName;
         if (isCallout) {
@@ -499,7 +501,8 @@ static StringeeImplement *sharedMyManager = nil;
     
     NSString *driverNameString = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].rideInfo.driverName];
     NSString *driverIDString = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].rideInfo.driverID];
-    CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:nil];
+        NSBundle *localBundle  = [NSBundle bundleForClass:[CallingViewController class]];
+    CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:localBundle];
     callingVC.isIncomingCall = NO;
     callingVC.username = driverNameString;
     callingVC.from = [StringeeImplement instance].stringeeClient.userId; //[[SPManager instance] getNumberForCallOut];
