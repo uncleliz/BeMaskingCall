@@ -62,6 +62,8 @@
 		5D06C45722980128005BF216 /* HTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D06C42622980128005BF216 /* HTTPClient.h */; };
 		5D06C45822980128005BF216 /* GlobalService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06C42722980128005BF216 /* GlobalService.m */; };
 		5D06C45A22980141005BF216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C45922980141005BF216 /* Assets.xcassets */; };
+		5D06C45C22980566005BF216 /* BeMaskingCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D06C45B22980566005BF216 /* BeMaskingCall.framework */; };
+		5D06C460229809F3005BF216 /* BeMaskingCall.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C45F229809F3005BF216 /* BeMaskingCall.podspec */; };
 		5DD59442229446AE004220B0 /* BeMaskingCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD59440229446AE004220B0 /* BeMaskingCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -120,6 +122,8 @@
 		5D06C42622980128005BF216 /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		5D06C42722980128005BF216 /* GlobalService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalService.m; sourceTree = "<group>"; };
 		5D06C45922980141005BF216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D06C45B22980566005BF216 /* BeMaskingCall.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BeMaskingCall.framework; path = ../DemoMaskingCall/DemoMaskingCall/BeMaskingCall.framework; sourceTree = "<group>"; };
+		5D06C45F229809F3005BF216 /* BeMaskingCall.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BeMaskingCall.podspec; sourceTree = SOURCE_ROOT; };
 		5DD5943D229446AE004220B0 /* BeMaskingCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BeMaskingCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD59440229446AE004220B0 /* BeMaskingCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeMaskingCall.h; sourceTree = "<group>"; };
 		5DD59441229446AE004220B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D06C45C22980566005BF216 /* BeMaskingCall.framework in Frameworks */,
 				331EF96778344ACA77FE7E10 /* Pods_BeMaskingCall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +293,7 @@
 				5D06C3EB2298010B005BF216 /* MKEventTracking.m */,
 				5D06C3EE22980127005BF216 /* MaskingCall */,
 				5DD59441229446AE004220B0 /* Info.plist */,
+				5D06C45F229809F3005BF216 /* BeMaskingCall.podspec */,
 				5D06C45922980141005BF216 /* Assets.xcassets */,
 			);
 			path = BeMaskingCall;
@@ -305,6 +311,7 @@
 		EA5490BD03B334AFC50ED395 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D06C45B22980566005BF216 /* BeMaskingCall.framework */,
 				DBE3C2D63A2B7C86B8F2771E /* Pods_BeMaskingCall.framework */,
 			);
 			name = Frameworks;
@@ -398,6 +405,7 @@
 			files = (
 				5D06C43222980128005BF216 /* OFL.txt in Resources */,
 				5D06C43322980128005BF216 /* IBMPlexSans-LightItalic.ttf in Resources */,
+				5D06C460229809F3005BF216 /* BeMaskingCall.podspec in Resources */,
 				5D06C42D22980128005BF216 /* incoming_call.aif in Resources */,
 				5D06C43A22980128005BF216 /* IBMPlexSans-Regular.ttf in Resources */,
 				5D06C45A22980141005BF216 /* Assets.xcassets in Resources */,
