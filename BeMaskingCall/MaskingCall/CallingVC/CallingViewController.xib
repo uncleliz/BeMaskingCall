@@ -20,7 +20,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CallingViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CallingViewController" customModule="BeMaskingCall" customModuleProvider="target">
             <connections>
                 <outlet property="blurView" destination="Wi2-fX-NqB" id="2WA-ri-Rst"/>
                 <outlet property="btSwitchVideo" destination="Wdy-J0-OCK" id="584-FT-ztf"/>
