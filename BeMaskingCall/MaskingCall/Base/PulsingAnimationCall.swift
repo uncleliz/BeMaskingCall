@@ -7,8 +7,8 @@
 //
 
 import UIKit
-@objc
-class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
+@objcMembers
+public class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
 {
 //    var pulsatingLayer: CAShapeLayer!
     var affect:CALayer!
@@ -81,7 +81,7 @@ class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
             self.instanceDelay = _startInterval
         }
     }
-    override var backgroundColor: CGColor?
+    override public var backgroundColor: CGColor?
     {
         get{
             return super.backgroundColor
@@ -91,7 +91,7 @@ class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
             affect.backgroundColor = newValue
         }
     }
-    override var repeatCount: Float
+    override public var repeatCount: Float
     {
         get
         {

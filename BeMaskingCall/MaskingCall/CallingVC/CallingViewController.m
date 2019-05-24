@@ -15,6 +15,7 @@
 #import <Stringee/Stringee.h>
 #import "CallManager.h"
 #import "MKEventTracking.h"
+#import <BeMaskingCall/BeMaskingCall-Swift.h>
 static int TIME_WINDOW = 2;
 static int CALL_TIME_OUT = 15; // giây
 
@@ -52,7 +53,7 @@ static int CALL_TIME_OUT = 15; // giây
     BOOL isEnableLocalVideo;
     
     BOOL hasAcceptedVideo;
-//    PulsingAnimationCall *pulsingCall;
+    PulsingAnimationCall *pulsingCall;
     BOOL isAnablePulsing;
 }
 
@@ -1149,26 +1150,26 @@ static int CALL_TIME_OUT = 15; // giây
 -(void) addPulsing
 {
     self.imgBackground.alpha = 1;
-//    if (/*!self.isIncomingCall && */self.isCalling == NO && isAnablePulsing == YES) {
-//        self.imgBackground.alpha = 0;
-//        pulsingCall = [[PulsingAnimationCall alloc] init];
-//        [self.imgBackground.superview.layer insertSublayer:pulsingCall below:self.optionView.layer];
-//        CGPoint position = CGPointMake([UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height/2); //self.imgBackground.center;
-//        position.y = position.y - 20;
-//        pulsingCall.position = position;
-//        [pulsingCall start];
-//    }
+    if (/*!self.isIncomingCall && */self.isCalling == NO && isAnablePulsing == YES) {
+        self.imgBackground.alpha = 0;
+        pulsingCall = [PulsingAnimationCall layer];
+        [self.imgBackground.superview.layer insertSublayer:pulsingCall below:self.optionView.layer];
+        CGPoint position = CGPointMake([UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height/2); //self.imgBackground.center;
+        position.y = position.y - 20;
+        pulsingCall.position = position;
+        [pulsingCall start];
+    }
 }
 -(void) removePulsing
 {
-//    if (pulsingCall && isAnablePulsing == YES) {
-//        [pulsingCall removeFromSuperlayer];
-//        pulsingCall = nil;
-//        [UIView animateWithDuration:1.0 animations:^{
-//            self.imgBackground.alpha = 1;
-//        } completion:^(BOOL finished) {
-//        }];
-//    }
+    if (pulsingCall && isAnablePulsing == YES) {
+        [pulsingCall removeFromSuperlayer];
+        pulsingCall = nil;
+        [UIView animateWithDuration:1.0 animations:^{
+            self.imgBackground.alpha = 1;
+        } completion:^(BOOL finished) {
+        }];
+    }
 }
 -(void) setupUI
 {

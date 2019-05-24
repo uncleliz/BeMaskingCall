@@ -167,7 +167,8 @@ static StringeeImplement *sharedMyManager = nil;
 // cuoc goi den
 -(void)openScreenCall:(StringeeCall *)stringeeCall
 {
-    NSBundle *localBundle  = [NSBundle bundleForClass:[CallingViewController class]];
+    NSBundle *localBundle  = [NSBundle mainBundle];
+    
     CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:localBundle];
     callingVC.isIncomingCall = YES;
     callingVC.username = stringeeCall.fromAlias;
@@ -434,7 +435,7 @@ static StringeeImplement *sharedMyManager = nil;
         NSString *toNumber = (NSString*)dicDecode[@"callnumber"]; //[[CallManager sharedInstance] getPhoneNumberWithTokenCallKit:to];
         NSString *callName = (NSString*)dicDecode[@"callname"];//[[CallManager sharedInstance] getCallNamerWithTokenCallKit:to];
         NSString *engagementID = (NSString*)dicDecode[@"engagementid"];
-        NSBundle *localBundle  = [NSBundle bundleForClass:[CallingViewController class]];
+        NSBundle *localBundle  = [NSBundle mainBundle];
 
         CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:localBundle];
         callingVC.isIncomingCall = NO;
@@ -501,7 +502,7 @@ static StringeeImplement *sharedMyManager = nil;
     
     NSString *driverNameString = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].rideInfo.driverName];
     NSString *driverIDString = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].rideInfo.driverID];
-        NSBundle *localBundle  = [NSBundle bundleForClass:[CallingViewController class]];
+        NSBundle *localBundle  = [NSBundle mainBundle];
     CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:localBundle];
     callingVC.isIncomingCall = NO;
     callingVC.username = driverNameString;
