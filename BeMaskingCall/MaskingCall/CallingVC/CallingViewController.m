@@ -1206,6 +1206,7 @@ static int CALL_TIME_OUT = 15; // giây
         self.labelPhoneNumber.text = [NSString stringWithFormat:@"Mobile: +%@", self.stringeeCall.from];
         self.stringeeCall.delegate = self;
         [self.stringeeCall initAnswerCall];
+        [self acceptTapped:_buttonAccept];
     }
 }
 -(UIImage*)imageNamed:(NSString*)name

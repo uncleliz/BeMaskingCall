@@ -529,7 +529,7 @@ static StringeeImplement *sharedMyManager = nil;
     callingVC.username = stringeeCall.fromAlias;
     callingVC.stringeeCall = stringeeCall;
     callingVC.isVideoCall = stringeeCall.isVideoCall;
-//    [callingVC resetCalling];
+    [callingVC resetCalling];
     [SPManager instance].callingViewController = callingVC;
 }
 //MARK: - show alert when timeout
