@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *strTracking_Call_Tap_Mute;
 @property NSString *strTracking_Receive_Call_Tap_End;
 @property NSString *strTracking_Call_Tap_End;
+- (void) setupUIWithDriver:(BOOL) isDriver;
 @end
 
 NS_ASSUME_NONNULL_END

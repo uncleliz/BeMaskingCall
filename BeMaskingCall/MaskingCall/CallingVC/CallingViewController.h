@@ -95,4 +95,6 @@ typedef NS_ENUM(NSInteger, ScreenMode) {
 - (void)decline;
 - (void)endCallAndDismissWithTitle:(NSString *)title;
 - (void)mute;
+
+-(void) resetCalling;
 @end

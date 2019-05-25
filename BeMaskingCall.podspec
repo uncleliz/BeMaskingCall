@@ -23,7 +23,9 @@ Pod::Spec.new do |spec|
   spec.dependency "Stringee"
   spec.static_framework = true
  spec.resource_bundles = {
-'BeMaskingCall' => ['BeMaskingCall/MaskingCall/CallingVC/*.{storyboard,xib}']}
+'BeMaskingCall' => ['BeMaskingCall/MaskingCall/CallingVC/*.{storyboard,xib}'],
+'BeMaskingCall' => ['BeMaskingCall/Assets/**/*']
+}
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If your library depends on compiler flags you can set them in the xcconfig hash

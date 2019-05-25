@@ -115,12 +115,12 @@ public class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
         
 //        NotificationCenter.default.addObserver(self,
 //                                               selector: #selector(onDidEnterBackground),
-//                                               name: NSNotification.Name.UIApplication.didEnterBackgroundNotification,
+//                                               name: Notification.Name.UIApplicationDidEnterBackground,
 //                                               object: nil)
 //
 //        NotificationCenter.default.addObserver(self,
 //                                               selector: #selector(onWillEnterForeground),
-//                                               name: NSNotification.Name.UIApplication.willEnterForegroundNotification,
+//                                               name: NSNotification.Name.UIApplicationWillEnterForeground,
 //                                               object: nil)
     }
     deinit {
@@ -157,7 +157,7 @@ public class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
         layer.strokeColor = strokeColor.cgColor
         layer.lineWidth = 20
         layer.fillColor = fillColor.cgColor
-//        layer.lineCap = CAShapeLayerLineCap.round
+//        layer.lineCap = kCALineCapRound
 //        layer.position = self.center
         return layer
     }
@@ -165,7 +165,7 @@ public class PulsingAnimationCall: CAReplicatorLayer, CAAnimationDelegate
         let aGroup = CAAnimationGroup()
         aGroup.duration = animationDuration + pulseInterval
         aGroup.repeatCount = self.repeatCount
-//        aGroup.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
+//        aGroup.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault) //CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
 
         let animation = CABasicAnimation(keyPath: "transform.scale.xy")
         animation.fromValue = fromValueForRadius

@@ -55,6 +55,7 @@ static int CALL_TIME_OUT = 15; // giây
     BOOL hasAcceptedVideo;
     PulsingAnimationCall *pulsingCall;
     BOOL isAnablePulsing;
+    NSBundle *localBundle;
 }
 
 - (void)viewDidLoad {
@@ -94,9 +95,9 @@ static int CALL_TIME_OUT = 15; // giây
             [[StringeeAudioManager instance] setLoudspeaker:YES];
             isSpeaker = YES;
             
-            [self.btCamera setBackgroundImage:[UIImage imageNamed:@"video_enable"] forState:UIControlStateNormal];
+            [self.btCamera setBackgroundImage:[ self imageNamed:@"video_enable"  ] forState:UIControlStateNormal];
         } else {
-            [self.btCamera setBackgroundImage:[UIImage imageNamed:@"video_disable"] forState:UIControlStateNormal];
+            [self.btCamera setBackgroundImage:[ self imageNamed:@"video_disable"  ] forState:UIControlStateNormal];
         }
         
         self.localView.frame = CGRectMake(0, 0, SCR_WIDTH, SCR_HEIGHT);
@@ -179,12 +180,12 @@ static int CALL_TIME_OUT = 15; // giây
 - (IBAction)speakerTapped:(UIButton *)sender {
     
     if (isSpeaker) {
-        [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOff] forState:UIControlStateNormal];
+        [self.buttonSpeaker setBackgroundImage:[ self imageNamed:[SPManager instance].callingModel.strImgSpeakerOff  ] forState:UIControlStateNormal];
         [[StringeeAudioManager instance] setLoudspeaker:NO];
         isSpeaker = NO;
         
     } else {
-        [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOn] forState:UIControlStateNormal];
+        [self.buttonSpeaker setBackgroundImage:[ self imageNamed:[SPManager instance].callingModel.strImgSpeakerOn  ] forState:UIControlStateNormal];
         [[StringeeAudioManager instance] setLoudspeaker:YES];
         isSpeaker = YES;
     }
@@ -196,7 +197,7 @@ static int CALL_TIME_OUT = 15; // giây
 - (IBAction)acceptTapped:(UIButton *)sender {
     if (_screenMode == ScreenModeReplyRequest) {
         if ([self.stringeeCall enableLocalVideo:YES]) {
-            [self.btCamera setBackgroundImage:[UIImage imageNamed:@"video_enable"] forState:UIControlStateNormal];
+            [self.btCamera setBackgroundImage:[ self imageNamed:@"video_enable"  ] forState:UIControlStateNormal];
         }
         NSDictionary *acceptRequest = @{@"type" : @"answerCameraRequest",
                                          @"accept" : @(YES)
@@ -244,7 +245,7 @@ static int CALL_TIME_OUT = 15; // giây
     if (isEnableLocalVideo) {
         if ([self.stringeeCall enableLocalVideo:NO]) {
             isEnableLocalVideo = !isEnableLocalVideo;
-            [self.btCamera setBackgroundImage:[UIImage imageNamed:@"video_disable"] forState:UIControlStateNormal];
+            [self.btCamera setBackgroundImage:[ self imageNamed:@"video_disable"  ] forState:UIControlStateNormal];
             
             if (!hasAcceptedVideo && !_isVideoCall) {
                 // Nếu chưa đồng ý video từ bên kia lần nào thì cứ gửi yêu cầu
@@ -261,7 +262,7 @@ static int CALL_TIME_OUT = 15; // giây
         if ([self.stringeeCall enableLocalVideo:YES]) {
             
             isEnableLocalVideo = !isEnableLocalVideo;
-            [self.btCamera setBackgroundImage:[UIImage imageNamed:@"video_enable"] forState:UIControlStateNormal];
+            [self.btCamera setBackgroundImage:[ self imageNamed:@"video_enable"  ] forState:UIControlStateNormal];
             
             if (!hasAcceptedVideo && !_isVideoCall) {
                 // Nếu chưa đồng ý video từ bên kia lần nào thì cứ gửi yêu cầu
@@ -361,11 +362,11 @@ static int CALL_TIME_OUT = 15; // giây
     if (isMute) {
         [self.stringeeCall mute:NO];
         isMute = NO;
-        [self.buttonMute setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgMuteOff] forState:UIControlStateNormal];
+        [self.buttonMute setBackgroundImage:[ self imageNamed:[SPManager instance].callingModel.strImgMuteOff  ] forState:UIControlStateNormal];
     } else {
         [self.stringeeCall mute:YES];
         isMute = YES;
-        [self.buttonMute setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgMuteOn] forState:UIControlStateNormal];
+        [self.buttonMute setBackgroundImage:[ self imageNamed:[SPManager instance].callingModel.strImgMuteOn  ] forState:UIControlStateNormal];
     }
     [[MKEventTracking instance] pushEventWithEventName:_isIncomingCall?[SPManager instance].callingModel.strTracking_Receive_Call_Tap_Mute:[SPManager instance].callingModel.strTracking_Call_Tap_Mute params:@{@"mute_status": isMute?@"on":@"off"}];
 }
@@ -538,21 +539,21 @@ static int CALL_TIME_OUT = 15; // giây
                 if ([StringeeImplement instance].stringeeClient.hasConnected) {
                     
                     if (audioBw >= 35000) {
-                        [self.imageInternetQualityVC setImage:[UIImage imageNamed:@"exellent"]];
-                        [self.imageInternetQuality setImage:[UIImage imageNamed:@"exellent"]];
+                        [self.imageInternetQualityVC setImage:[ self imageNamed:@"exellent"]];
+                        [self.imageInternetQuality setImage:[ self imageNamed:@"exellent"]];
                     } else if (audioBw >= 25000 && audioBw < 35000) {
-                        [self.imageInternetQualityVC setImage:[UIImage imageNamed:@"good"]];
-                        [self.imageInternetQuality setImage:[UIImage imageNamed:@"good"]];
+                        [self.imageInternetQualityVC setImage:[ self imageNamed:@"good"]];
+                        [self.imageInternetQuality setImage:[ self imageNamed:@"good"]];
                     } else if (audioBw > 15000 && audioBw < 25000) {
-                        [self.imageInternetQualityVC setImage:[UIImage imageNamed:@"average"]];
-                        [self.imageInternetQuality setImage:[UIImage imageNamed:@"average"]];
+                        [self.imageInternetQualityVC setImage:[ self imageNamed:@"average"]];
+                        [self.imageInternetQuality setImage:[ self imageNamed:@"average"]];
                     } else {
-                        [self.imageInternetQualityVC setImage:[UIImage imageNamed:@"poor"]];
-                        [self.imageInternetQuality setImage:[UIImage imageNamed:@"poor"]];
+                        [self.imageInternetQualityVC setImage:[ self imageNamed:@"poor"]];
+                        [self.imageInternetQuality setImage:[ self imageNamed:@"poor"]];
                     }
                 } else {
-                    [self.imageInternetQualityVC setImage:[UIImage imageNamed:@"no_connect"]];
-                    [self.imageInternetQuality setImage:[UIImage imageNamed:@"no_connect"]];
+                    [self.imageInternetQualityVC setImage:[ self imageNamed:@"no_connect"]];
+                    [self.imageInternetQuality setImage:[ self imageNamed:@"no_connect"]];
                 }
                 
             });
@@ -591,13 +592,13 @@ static int CALL_TIME_OUT = 15; // giây
         
         for( AVAudioSessionPortDescription *portDescription in route.outputs ) {
             if ([portDescription.portType isEqualToString:AVAudioSessionPortBuiltInSpeaker]) {
-                [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOn] forState:UIControlStateNormal];
+                [self.buttonSpeaker setBackgroundImage:[ self imageNamed:[SPManager instance].callingModel.strImgSpeakerOn] forState:UIControlStateNormal];
                 self->isSpeaker = YES;
                 [[MKEventTracking instance] pushEventWithEventName:self->_isIncomingCall?[SPManager instance].callingModel.strTracking_Receive_Call_Tap_Speaker:[SPManager instance].callingModel.strTracking_Call_Tap_Speaker params:@{@"speaker_status": self->isSpeaker?@"on":@"off"}];
 
                 return;
             } else {
-                [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOff] forState:UIControlStateNormal];
+                [self.buttonSpeaker setBackgroundImage:[ self imageNamed:[SPManager instance].callingModel.strImgSpeakerOff] forState:UIControlStateNormal];
                 self->isSpeaker = NO;
                 [[MKEventTracking instance] pushEventWithEventName:self->_isIncomingCall?[SPManager instance].callingModel.strTracking_Receive_Call_Tap_Speaker:[SPManager instance].callingModel.strTracking_Call_Tap_Speaker params:@{@"speaker_status": self->isSpeaker?@"on":@"off"}];
                 return;
@@ -736,7 +737,7 @@ static int CALL_TIME_OUT = 15; // giây
             self.videoBlurView.hidden = NO;
             self.lbRequestVideo.text = [NSString stringWithFormat:@"%@ đang chia sẻ video...", self.username];
             [self.buttonAccept setTransform:CGAffineTransformIdentity];
-            [self.buttonAccept setBackgroundImage:[UIImage imageNamed:@"icon_accept_video_call"] forState:UIControlStateNormal];
+            [self.buttonAccept setBackgroundImage:[ self imageNamed:@"icon_accept_video_call"] forState:UIControlStateNormal];
             break;
             
         default:
@@ -821,7 +822,8 @@ static int CALL_TIME_OUT = 15; // giây
         int loopIndex = 10;
         
         if (self.isIncomingCall) {
-            soundFilePath = [[NSBundle mainBundle] pathForResource:@"incoming_call"  ofType:@"aif"];
+            NSBundle *localBundle = [NSBundle bundleForClass:[self classForCoder]];
+            soundFilePath = [localBundle pathForResource:@"incoming_call"  ofType:@"aif"];
             soundFileURL = [NSURL fileURLWithPath:soundFilePath];
             
             [self switchRouteTo:AVAudioSessionPortOverrideSpeaker];
@@ -883,7 +885,8 @@ static int CALL_TIME_OUT = 15; // giây
             NSString *soundFilePath;
             NSURL *soundFileURL;
             int loopIndex = 10;
-            soundFilePath = [[NSBundle mainBundle] pathForResource:strNameAudio  ofType:strType];
+            NSBundle *localBundle = [NSBundle bundleForClass:[self classForCoder]];
+            soundFilePath = [localBundle pathForResource:strNameAudio  ofType:strType];
             soundFileURL = [NSURL fileURLWithPath:soundFilePath];
             ringAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
             ringAudioPlayer.numberOfLoops = loopIndex;
@@ -1032,7 +1035,7 @@ static int CALL_TIME_OUT = 15; // giây
             // Yêu cầu bị tự chối
             if ([self.stringeeCall enableLocalVideo:NO]) {
                 isEnableLocalVideo = NO;
-                [self.btCamera setBackgroundImage:[UIImage imageNamed:@"video_disable"] forState:UIControlStateNormal];
+                [self.btCamera setBackgroundImage:[ self imageNamed:@"video_disable"] forState:UIControlStateNormal];
                 [self updateScreenWithScreenMode:ScreenModeVoiceCall];
             }
         }
@@ -1173,11 +1176,13 @@ static int CALL_TIME_OUT = 15; // giây
 }
 -(void) setupUI
 {
-    [_buttonEndCall setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgDecline] forState:UIControlStateNormal];
-    [_buttonDecline setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgDecline] forState:UIControlStateNormal];
-    [_buttonAccept setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgAccept] forState:UIControlStateNormal];
-    [_buttonMute setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgMuteOff] forState:UIControlStateNormal];
-    [self.buttonSpeaker setBackgroundImage:[UIImage imageNamed:[SPManager instance].callingModel.strImgSpeakerOff] forState:UIControlStateNormal];
+    localBundle = [NSBundle bundleForClass:[self classForCoder]];
+    _imgBackground.image = [self imageNamed:[SPManager instance].callingModel.strImgBackground];
+    [_buttonEndCall setBackgroundImage:[self imageNamed:[SPManager instance].callingModel.strImgDecline] forState:UIControlStateNormal];
+    [_buttonDecline setBackgroundImage:[self imageNamed:[SPManager instance].callingModel.strImgDecline] forState:UIControlStateNormal];
+    [_buttonAccept setBackgroundImage:[ self imageNamed:[SPManager instance].callingModel.strImgAccept] forState:UIControlStateNormal];
+    [_buttonMute setBackgroundImage:[ self imageNamed:[SPManager instance].callingModel.strImgMuteOff] forState:UIControlStateNormal];
+    [self.buttonSpeaker setBackgroundImage:[ self imageNamed:[SPManager instance].callingModel.strImgSpeakerOff  ] forState:UIControlStateNormal];
     self.view.backgroundColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorBackground];
     self.lbTitle.textColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorText];
     self.labelUsername.textColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorText];
@@ -1186,5 +1191,30 @@ static int CALL_TIME_OUT = 15; // giây
     self.labelMute.textColor = [Utils colorWithHexString:[SPManager instance].callingModel.strColorText];
     
     self.lbTitle.text = [SPManager instance].callingModel.strLabelTitle;
+}
+-(void) resetCalling
+{
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    [timeoutTimer invalidate];
+    timeoutTimer = nil;
+    if (self.isIncomingCall) {
+        
+        if (!self.isCalling) {
+            [self startSound];
+        }
+        
+        self.labelPhoneNumber.text = [NSString stringWithFormat:@"Mobile: +%@", self.stringeeCall.from];
+        self.stringeeCall.delegate = self;
+        [self.stringeeCall initAnswerCall];
+    }
+}
+-(UIImage*)imageNamed:(NSString*)name
+{
+    localBundle = [NSBundle bundleForClass:[self classForCoder]];
+    UIImage *image = [UIImage imageNamed:name];
+    if (!image) {
+        image = [ UIImage imageNamed:name inBundle:localBundle compatibleWithTraitCollection:nil];
+    }
+    return image;
 }
 @end

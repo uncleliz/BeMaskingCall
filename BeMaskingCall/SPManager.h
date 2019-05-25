@@ -56,6 +56,7 @@ typedef NS_ENUM(NSInteger, SyncStateCalling) {
 @property (nonatomic, strong) NSString *baseURLString;
 @property (nonatomic, strong) NSString *subUrlString;
 @property (strong, nonatomic) CallingVCModel *callingModel;
+@property (assign, nonatomic) BOOL isDriver;
 
 -(void) getConfigMaskingCall;
 - (NSString *)getNumberForCallOut;

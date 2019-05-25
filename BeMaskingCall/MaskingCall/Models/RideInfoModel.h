@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RideInfoModel : NSObject
-@property(nonatomic, strong) NSString *driverID;
+@property(nonatomic, strong) NSString *personID;
 @property(nonatomic, strong) NSString *engagementID;
-@property(nonatomic, strong) NSString *driverName;
-@property(nonatomic, strong) NSString *driverPhoneNumber;
+@property(nonatomic, strong) NSString *personName;
+@property(nonatomic, strong) NSString *personPhoneNumber;
 
 @end
 

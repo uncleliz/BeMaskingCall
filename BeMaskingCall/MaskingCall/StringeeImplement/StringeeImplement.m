@@ -106,7 +106,16 @@ static StringeeImplement *sharedMyManager = nil;
     //kiểm tra nếu customer đang gọi đi cho driver, đồng thời driver cũng gọi tới cho customer
     //+ thì sẽ reject cuộc gọi từ phía driver và tiếp tục cuộc gọi từ customer
     //+ ngược lại phía driver sẽ reject cuộc gọi đi và nhận cuộc gọi tới từ customer
-
+    
+    //kiem tra neu app driver, dang goi di va co cuoc goi den. kiem tra xem co phai 2 nguoi dang goi cho nhau
+    if ([SPManager instance].isDriver && [SPManager instance].callingViewController && [SPManager instance].isClickOutGoing == SyncStateCallingOutGoing)
+    {
+        // người gọi đến trùng với cuộc gọi đi
+        if ([[SPManager instance].callingViewController.to isEqualToString:stringeeCall.from]) {
+            [self resetScreenCall:stringeeCall];
+            return;
+        }
+    }
     if (![CallManager sharedInstance].currentCall && ![SPManager instance].callingViewController && ![[SPManager instance] isSystemCall] && [SPManager instance].isClickOutGoing == SyncStateCallingNone) {
         [SPManager instance].isClickOutGoing = SyncStateCallingInComing;
         seCall = stringeeCall;
@@ -133,7 +142,7 @@ static StringeeImplement *sharedMyManager = nil;
             //            {
             //mld:- hardcode
             NSString *engagementID = @"";
-            if ([seCall.from isEqualToString:[SPManager instance].rideInfo.driverID] || [seCall.to isEqualToString:[SPManager instance].rideInfo.driverID]) {
+            if ([seCall.from isEqualToString:[SPManager instance].rideInfo.personID] || [seCall.to isEqualToString:[SPManager instance].rideInfo.personID]) {
                 engagementID = [SPManager instance].rideInfo.engagementID;
             }
             [[CallManager sharedInstance] reportIncomingCallForUUID:[NSUUID new] phoneNumber:seCall.from callerName:seCall.fromAlias isVideoCall:stringeeCall.isVideoCall engagementID:engagementID  completionHandler:^(NSError *error) {
@@ -167,8 +176,7 @@ static StringeeImplement *sharedMyManager = nil;
 // cuoc goi den
 -(void)openScreenCall:(StringeeCall *)stringeeCall
 {
-    NSBundle *localBundle  = [NSBundle mainBundle];
-    
+    NSBundle *localBundle = [NSBundle bundleForClass:[CallingViewController classForCoder]];
     CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:localBundle];
     callingVC.isIncomingCall = YES;
     callingVC.username = stringeeCall.fromAlias;
@@ -435,8 +443,7 @@ static StringeeImplement *sharedMyManager = nil;
         NSString *toNumber = (NSString*)dicDecode[@"callnumber"]; //[[CallManager sharedInstance] getPhoneNumberWithTokenCallKit:to];
         NSString *callName = (NSString*)dicDecode[@"callname"];//[[CallManager sharedInstance] getCallNamerWithTokenCallKit:to];
         NSString *engagementID = (NSString*)dicDecode[@"engagementid"];
-        NSBundle *localBundle  = [NSBundle mainBundle];
-
+        NSBundle *localBundle = [NSBundle bundleForClass:[CallingViewController classForCoder]];
         CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:localBundle];
         callingVC.isIncomingCall = NO;
         callingVC.username = callName;
@@ -500,9 +507,9 @@ static StringeeImplement *sharedMyManager = nil;
     if ([SPManager instance].isClickOutGoing == SyncStateCallingNone) {
     [SPManager instance].isClickOutGoing = SyncStateCallingOutGoing;
     
-    NSString *driverNameString = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].rideInfo.driverName];
-    NSString *driverIDString = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].rideInfo.driverID];
-        NSBundle *localBundle  = [NSBundle mainBundle];
+    NSString *driverNameString = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].rideInfo.personName];
+    NSString *driverIDString = [[BeCommon shareCommonMethods] passValidString:[SPManager instance].rideInfo.personID];
+        NSBundle *localBundle = [NSBundle bundleForClass:[CallingViewController classForCoder]];
     CallingViewController *callingVC = [[CallingViewController alloc] initWithNibName:@"CallingViewController" bundle:localBundle];
     callingVC.isIncomingCall = NO;
     callingVC.username = driverNameString;
@@ -514,6 +521,16 @@ static StringeeImplement *sharedMyManager = nil;
     [SPManager instance].callingViewController = callingVC;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:callingVC animated:YES completion:nil];
     }
+}
+-(void)resetScreenCall:(StringeeCall *)stringeeCall
+{
+    CallingViewController *callingVC = [SPManager instance].callingViewController;
+    callingVC.isIncomingCall = YES;
+    callingVC.username = stringeeCall.fromAlias;
+    callingVC.stringeeCall = stringeeCall;
+    callingVC.isVideoCall = stringeeCall.isVideoCall;
+//    [callingVC resetCalling];
+    [SPManager instance].callingViewController = callingVC;
 }
 //MARK: - show alert when timeout
 - (void)showCustomAlertViewTimeout {
