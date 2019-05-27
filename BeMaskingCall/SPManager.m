@@ -315,26 +315,39 @@ static SPManager *spManager = nil;
                     [[StringeeImplement instance] connectToStringeeServer];
                 }
             }
-            if (responseObject[@"phone_number"])
+            if (responseObject[@"success"])
             {
-                NSDictionary *dicMaskingInfo = @{@"driver": strDriverId,@"phone_number":responseObject[@"phone_number"],@"engagement_id": engagementID};
-                [Utils writeCustomObjToUserDefaults:kmasking_phone_number object:dicMaskingInfo];
                 NSString *phone_number = [[BeCommon shareCommonMethods] passValidString:responseObject[@"phone_number"]];
-                completionHandler(phone_number);
+                NSDictionary *dicMaskingInfo = @{@"driver": strDriverId,@"phone_number":phone_number,@"engagement_id": engagementID};
+                [Utils writeCustomObjToUserDefaults:kmasking_phone_number object:dicMaskingInfo];
+                if (completionHandler != nil) {
+                    completionHandler(phone_number);
+                }
             }
             else
             {
-                completionHandler(nil);
+                if (completionHandler != nil) {
+                    completionHandler(nil);
+                }
             }
 
         }];
     }
     else {
-        completionHandler(nil);
+        if (completionHandler != nil) {
+            completionHandler(nil);
+        }
     }
 }
-- (void) updateConfigMaskingCall:(id) responseObject driverID:(NSString*)strDriverId
+- (void) updateConfigMaskingCall:(id) responseObject driverID:(NSString*)strDriverId  engagementID:(NSString*)engagementID
 {
+    NSDictionary *dicMaskingInfo = (NSDictionary*)[Utils readCustomObjFromUserDefaults:kmasking_phone_number];
+    if (dicMaskingInfo) {
+        //check if have masking number
+        if ([engagementID isEqualToString:dicMaskingInfo[@"engagement_id"]] && engagementID.length > 0) {
+            return;
+        }
+    }
     if (responseObject) {
         //enable call in app
         BOOL enableCallInApp = (responseObject[@"enable_call_in_app"] != nil && responseObject[@"enable_call_in_app"] != [NSNull null]) ? [responseObject[@"enable_call_in_app"] boolValue] : NO;
@@ -353,9 +366,10 @@ static SPManager *spManager = nil;
             [[StringeeImplement instance] connectToStringeeServer];
         }
     }
-    if (responseObject[@"phone_number"])
+    if (responseObject[@"success"])
     {
-        NSDictionary *dicMaskingInfo = @{@"driver": strDriverId,@"phone_number":responseObject[@"phone_number"]};
+        NSString *phone_number = [[BeCommon shareCommonMethods] passValidString:responseObject[@"phone_number"]];
+        NSDictionary *dicMaskingInfo = @{@"driver": strDriverId,@"phone_number":phone_number,@"engagement_id": engagementID};
         [Utils writeCustomObjToUserDefaults:kmasking_phone_number object:dicMaskingInfo];
     }
 }
