@@ -64,6 +64,7 @@
 		5D06C45A22980141005BF216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C45922980141005BF216 /* Assets.xcassets */; };
 		5D06C460229809F3005BF216 /* BeMaskingCall.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C45F229809F3005BF216 /* BeMaskingCall.podspec */; };
 		5D43114F229B93120005D391 /* BeMaskingCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D43114E229B93120005D391 /* BeMaskingCall.framework */; };
+		5D431152229BA0A40005D391 /* BeMaskingCall.zip in Resources */ = {isa = PBXBuildFile; fileRef = 5D431151229BA0A40005D391 /* BeMaskingCall.zip */; };
 		5DD59442229446AE004220B0 /* BeMaskingCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD59440229446AE004220B0 /* BeMaskingCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		5D06C45B22980566005BF216 /* BeMaskingCall.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BeMaskingCall.framework; path = ../DemoMaskingCall/DemoMaskingCall/BeMaskingCall.framework; sourceTree = "<group>"; };
 		5D06C45F229809F3005BF216 /* BeMaskingCall.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BeMaskingCall.podspec; sourceTree = SOURCE_ROOT; };
 		5D43114E229B93120005D391 /* BeMaskingCall.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BeMaskingCall.framework; sourceTree = "<group>"; };
+		5D431151229BA0A40005D391 /* BeMaskingCall.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = BeMaskingCall.zip; sourceTree = "<group>"; };
 		5DD5943D229446AE004220B0 /* BeMaskingCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BeMaskingCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD59440229446AE004220B0 /* BeMaskingCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeMaskingCall.h; sourceTree = "<group>"; };
 		5DD59441229446AE004220B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 		5D431150229B94380005D391 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D431151229BA0A40005D391 /* BeMaskingCall.zip */,
 				5D43114E229B93120005D391 /* BeMaskingCall.framework */,
 			);
 			path = Frameworks;
@@ -426,6 +429,7 @@
 				5D06C42A22980128005BF216 /* busy_signal.mp3 in Resources */,
 				5D06C44B22980128005BF216 /* CallingViewController.xib in Resources */,
 				5D06C42C22980128005BF216 /* end_call_tututu.caf in Resources */,
+				5D431152229BA0A40005D391 /* BeMaskingCall.zip in Resources */,
 				5D06C43622980128005BF216 /* IBMPlexSans-ThinItalic.ttf in Resources */,
 				5D06C43422980128005BF216 /* IBMPlexSans-ExtraLight.ttf in Resources */,
 				5D06C43B22980128005BF216 /* IBMPlexSans-ExtraLightItalic.ttf in Resources */,
