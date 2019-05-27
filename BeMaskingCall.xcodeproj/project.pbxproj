@@ -63,6 +63,8 @@
 		5D06C45822980128005BF216 /* GlobalService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06C42722980128005BF216 /* GlobalService.m */; };
 		5D06C45A22980141005BF216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C45922980141005BF216 /* Assets.xcassets */; };
 		5D06C460229809F3005BF216 /* BeMaskingCall.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C45F229809F3005BF216 /* BeMaskingCall.podspec */; };
+		5D431149229B83E20005D391 /* BeMaskingCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D06C45B22980566005BF216 /* BeMaskingCall.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		5D43114A229B83F30005D391 /* BeMaskingCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD5943D229446AE004220B0 /* BeMaskingCall.framework */; };
 		5DD59442229446AE004220B0 /* BeMaskingCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD59440229446AE004220B0 /* BeMaskingCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -136,6 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D43114A229B83F30005D391 /* BeMaskingCall.framework in Frameworks */,
+				5D431149229B83E20005D391 /* BeMaskingCall.framework in Frameworks */,
 				331EF96778344ACA77FE7E10 /* Pods_BeMaskingCall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
