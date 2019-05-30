@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "uncleliz" => "dinhmanhvp@gmail.com" }
   spec.platform     = :ios, "9.0"
 #spec.source       = { :git => "https://github.com/uncleliz/BeMaskingCall.git", :tag => "1.0.28"}
-spec.source = { :http => 'https://github.com/uncleliz/BeMaskingCall/raw/master/BeMaskingCall/Frameworks/BeMaskingCall.zip' }
+spec.source = { :http => 'https://github.com/uncleliz/BeMaskingCall/blob/master/Output/BeMaskingCall-Debug-iphoneuniversal/BeMaskingCall.framework.zip' }
 spec.source_files  = "BeMaskingCall/*.{h}","BeMaskingCall/MaskingCall/ /Manager/*.{h}","BeMaskingCall/MaskingCall/CallingVC/*.{h}","BeMaskingCall/MaskingCall/Models/*.{h}","BeMaskingCall/MaskingCall/Utils/*.{h}"
   spec.swift_version = "4.0"
   spec.dependency "AFNetworking"
